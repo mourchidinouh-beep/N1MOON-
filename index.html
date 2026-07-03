@@ -3,28 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N1MOON | معرض الأعمال</title>
+    <title>N1MOON | الكون والفن</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; text-align: center; padding: 40px; background-color: #1a1a1a; color: #f0f0f0; }
-        .container { background: #2a2a2a; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.3); max-width: 500px; margin: auto; }
-        h1 { margin-bottom: 10px; color: #fff; }
-        p { color: #aaa; margin-bottom: 30px; }
-        .btn { display: block; margin: 15px auto; padding: 15px 25px; width: 80%; text-decoration: none; border-radius: 10px; font-weight: bold; transition: 0.3s; }
-        .btn-fourthwall { background-color: #00e676; color: #000; }
-        .btn-saatchi { background-color: #fff; color: #000; }
-        .btn:hover { opacity: 0.8; transform: scale(1.02); }
+        body {
+            background-color: #050505;
+            color: #d1d1d1;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            text-align: center;
+            background-image: radial-gradient(circle at center, #1a1a2e 0%, #050505 80%);
+        }
+        .container {
+            background: rgba(20, 20, 25, 0.7);
+            padding: 50px 30px;
+            border-radius: 30px;
+            border: 1px solid #333;
+            box-shadow: 0 0 20px rgba(0, 255, 204, 0.1);
+            width: 85%;
+            max-width: 400px;
+        }
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 8px;
+            color: #fff;
+            margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        }
+        .subtitle {
+            font-size: 0.9rem;
+            color: #888;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            border: 1px solid #555;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+        .btn-shop { background: #000; color: #00ffcc; border-color: #00ffcc; }
+        .btn-shop:hover { background: #00ffcc; color: #000; box-shadow: 0 0 15px #00ffcc; }
+        .btn-art { background: #000; color: #fff; border-color: #fff; }
+        .btn-art:hover { background: #fff; color: #000; box-shadow: 0 0 15px #fff; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>N1MOON</h1>
-        <p>فن رقمي مستوحى من القمر والكون</p>
-        
-        <!-- رابط متجر المنتجات المباشر -->
-        <a href="https://n1moon-shop.fourthwall.com/" class="btn btn-fourthwall">متجر المنتجات (Fourthwall)</a>
-        
-        <!-- رابط معرضك العام على Saatchi Art -->
-        <a href="https://www.saatchiart.com/nouhart" class="btn btn-saatchi">معرض اللوحات (Saatchi Art)</a>
-    </div>
+
+<div class="container">
+    <h1>N1MOON</h1>
+    <p class="subtitle">استكشافات رقمية من أعماق الكون</p>
+    
+    <!-- ضع رابط متجر Fourthwall الخاص بك هنا بين علامتي التنصيص -->
+    <a href="https://fourthwall.com/your-store-link" class="btn btn-shop">متجر المنتجات</a>
+    
+    <!-- ضع رابط معرض Saatchi Art الخاص بك هنا بين علامتي التنصيص -->
+    <a href="https://saatchiart.com/your-profile-link" class="btn btn-art">معرض اللوحات</a>
+</div>
+
 </body>
 </html>
