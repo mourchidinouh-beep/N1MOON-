@@ -14,52 +14,60 @@
             min-height: 100vh;
             margin: 0;
             overflow: hidden;
+            position: relative;
         }
-        /* خلفية الأشكال الهندسية */
+        /* خلفية هندسية */
         .geometry-bg {
             position: absolute;
             width: 100%; height: 100%;
             z-index: -1;
+            background-image: radial-gradient(circle, #222 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+        .ring {
+            position: absolute;
+            border: 1px solid #fff;
+            border-radius: 50%;
             opacity: 0.2;
         }
-        .circle { border: 2px solid #fff; border-radius: 50%; position: absolute; }
-        .triangle { border-left: 60px solid transparent; border-right: 60px solid transparent; border-bottom: 100px solid #fff; position: absolute; }
-
         /* القمر الأبيض */
         .moon-full {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             background: #fff;
             border-radius: 50%;
-            box-shadow: 0 0 50px #fff;
-            margin-bottom: 20px;
+            box-shadow: 0 0 70px #fff;
+            margin-bottom: 30px;
         }
-        h1 { font-size: 2.5rem; letter-spacing: 15px; margin-bottom: 50px; }
+        h1 { font-size: 2.5rem; letter-spacing: 15px; margin-bottom: 40px; }
         .btn {
             display: block;
-            width: 280px;
-            padding: 15px;
-            margin: 15px 0;
-            border: 1px solid #fff;
+            width: 320px;
+            padding: 22px;
+            margin: 20px 0;
+            border: 2px solid #fff;
             text-align: center;
             text-decoration: none;
             color: #fff;
             font-weight: bold;
-            transition: 0.3s;
+            font-size: 1.1rem;
+            transition: 0.4s;
+            text-transform: uppercase;
         }
         .btn:hover { background: #fff; color: #000; }
-        .btn span { display: block; font-size: 0.8rem; opacity: 0.7; margin-top: 5px; }
+        .btn span { display: block; font-size: 0.8rem; opacity: 0.7; margin-top: 8px; }
     </style>
 </head>
 <body>
-    <div class="geometry-bg">
-        <div class="circle" style="width: 400px; height: 400px; top: 10%; left: 10%;"></div>
-        <div class="triangle" style="top: 50%; right: 20%;"></div>
-    </div>
+    <div class="geometry-bg"></div>
+    <div class="ring" style="width: 500px; height: 500px; top: 15%; left: 20%;"></div>
+    <div class="ring" style="width: 700px; height: 700px; top: 5%; left: 10%;"></div>
 
     <div class="moon-full"></div>
     <h1>N1MOON</h1>
     
+    <!-- الرابط الذي طلبته بالضبط -->
     <a href="https://n1moon-shop.fourthwall.com/admin/dashboard/products/eed19357-3394-4512-946e-411df33f3bf1/preview" class="btn">
         متجر المنتجات
         <span>SHOP PRODUCTS</span>
