@@ -1,58 +1,39 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N1MOON | Digital Reflection</title>
+    <title>N1MOON | Official Store</title>
     <style>
-        /* تصميم الخلفية والأساس */
-        body { background: #000; color: #fff; font-family: 'Arial', sans-serif; text-align: center; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; }
-
-        /* حاوية الشعار */
-        .logo-container { margin-bottom: 30px; position: relative; width: 250px; height: 250px; display: flex; justify-content: center; align-items: center; }
-
-        /* القمر الهندسي (القلب المتوهج) */
-        .logo-img { max-width: 100%; max-height: 100%; filter: drop-shadow(0 0 20px rgba(173, 216, 230, 0.8)); animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { filter: drop-shadow(0 0 20px rgba(173, 216, 230, 0.8)); } 50% { filter: drop-shadow(0 0 40px rgba(173, 216, 230, 1)); } 100% { filter: drop-shadow(0 0 20px rgba(173, 216, 230, 0.8)); } }
-
-        /* النص السفلي للشعار */
-        .tagline { font-size: 14px; color: #aaa; margin-top: -20px; margin-bottom: 30px; font-weight: 300; letter-spacing: 1px; text-transform: uppercase; }
-
-        /* الأزرار */
-        .btn { display: block; width: 80%; max-width: 300px; margin: 15px auto; padding: 18px 20px; border: 2px solid #fff; color: #fff; text-decoration: none; transition: 0.3s; font-weight: bold; text-transform: uppercase; border-radius: 4px; }
-        .btn:hover { background: #fff; color: #000; }
-
-        /* قسم التواصل الاجتماعي */
-        .social { margin-top: 50px; font-size: 18px; }
-        .social a { color: #888; margin: 0 15px; text-decoration: none; transition: 0.3s; }
-        .social a:hover { color: #fff; }
-
-        /* مبدل اللغات */
-        .lang-switch { margin-top: 20px; font-size: 12px; }
-        .lang-switch a { color: #555; margin: 0 5px; text-decoration: none; }
+        body { background: #000; color: #fff; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding: 20px; }
+        .logo-img { width: 180px; height: auto; border-radius: 50%; border: 1px solid #333; margin-top: 20px; }
+        .title { font-size: 24px; margin: 10px 0; letter-spacing: 2px; }
+        .tagline { color: #888; font-size: 14px; margin-bottom: 30px; }
+        .btn { display: block; width: 90%; max-width: 400px; margin: 12px auto; padding: 16px; border: 1px solid #444; color: #fff; text-decoration: none; transition: 0.4s; text-transform: uppercase; border-radius: 5px; font-weight: bold; }
+        .btn:hover { background: #fff; color: #000; border-color: #fff; }
+        .contact-section { margin-top: 50px; padding: 20px; border-top: 1px solid #222; }
+        .social-btn { display: inline-block; margin: 10px; padding: 10px 20px; border: 1px solid #333; color: #aaa; text-decoration: none; border-radius: 20px; font-size: 14px; }
+        .social-btn:hover { color: #fff; border-color: #fff; }
     </style>
 </head>
 <body>
 
-    <div class="logo-container">
-        <!-- هذا هو الشعار الهندسي (image_4.png) -->
-        <img src="image_4.png" alt="N1MOON Logo" class="logo-img">
-    </div>
+    <!-- الصورة المرفقة -->
+    <img src="1782592807389.png" alt="N1MOON Logo" class="logo-img">
+    
+    <h1 class="title">N 1 M O O N</h1>
+    <p class="tagline">THE DIGITAL INNER REFLECTION</p>
 
-    <div class="tagline">THE DIGITAL INNER REFLECTION</div>
+    <!-- روابط المتجر -->
+    <a href="https://n1moon-shop.fourthwall.com" class="btn">متجر المنتجات | Shop Products</a>
+    <a href="https://www.saatchiart.com/nouhart" class="btn">معرض اللوحات | Art Gallery</a>
 
-    <a href="https://n1moon-shop.fourthwall.com" class="btn">متجر المنتجات / Shop Products</a>
-    <a href="https://www.saatchiart.com/nouhart" class="btn">معرض اللوحات / Art Gallery</a>
-
-    <div class="social">
-        <a href="#">X</a>
-        <a href="#">Email</a>
-        <a href="#">Phone</a>
-    </div>
-
-    <div class="lang-switch">
-        <a href="#" style="color:#fff;">العربية</a> | <a href="#" style="color:#fff;">English</a>
+    <!-- قسم التواصل -->
+    <div class="contact-section">
+        <p style="color:#555; margin-bottom:20px;">تواصل معنا للطلبات والاستفسارات</p>
+        <a href="https://x.com/MourchidiN25201" class="social-btn">X (Twitter)</a>
+        <a href="mailto:mourchidinouh@gmail.com" class="social-btn">Email</a>
+        <a href="tel:+212700450691" class="social-btn">Call: 0700450691</a>
     </div>
 
 </body>
