@@ -3,37 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>N1MOON | Official Store</title>
+    <title>N1MOON | المتجر والمعرض</title>
     <style>
-        body { background: #000; color: #fff; font-family: 'Segoe UI', sans-serif; text-align: center; margin: 0; padding: 20px; }
-        .logo-img { width: 180px; height: auto; border-radius: 50%; border: 1px solid #333; margin-top: 20px; }
-        .title { font-size: 24px; margin: 10px 0; letter-spacing: 2px; }
-        .tagline { color: #888; font-size: 14px; margin-bottom: 30px; }
-        .btn { display: block; width: 90%; max-width: 400px; margin: 12px auto; padding: 16px; border: 1px solid #444; color: #fff; text-decoration: none; transition: 0.4s; text-transform: uppercase; border-radius: 5px; font-weight: bold; }
-        .btn:hover { background: #fff; color: #000; border-color: #fff; }
-        .contact-section { margin-top: 50px; padding: 20px; border-top: 1px solid #222; }
-        .social-btn { display: inline-block; margin: 10px; padding: 10px 20px; border: 1px solid #333; color: #aaa; text-decoration: none; border-radius: 20px; font-size: 14px; }
-        .social-btn:hover { color: #fff; border-color: #fff; }
+        body { margin: 0; background: #000; color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
+        
+        /* دائرة الشعار - القمر والتقنية */
+        .logo { width: 150px; height: 150px; background: #0055FF; border-radius: 50%; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; border: 2px solid #C0C0C0; }
+        
+        h1 { font-size: 2rem; margin: 10px 0; }
+        p { color: #C0C0C0; max-width: 500px; margin-bottom: 30px; }
+        
+        /* الأزرار باللون الأزرق الكهربائي */
+        .btn-container { display: flex; flex-direction: column; gap: 15px; width: 80%; max-width: 300px; }
+        .btn { padding: 15px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: 0.3s; color: white; }
+        .btn-shop { background: #0055FF; } /* الأزرق الكهربائي */
+        .btn-art { border: 1px solid #C0C0C0; } /* الفضي */
+        .btn:hover { opacity: 0.8; }
     </style>
 </head>
 <body>
 
-    <!-- الصورة المرفقة -->
-    <img src="1782592807389.png" alt="N1MOON Logo" class="logo-img">
+    <div class="logo">N1MOON</div>
+    <h1>N1MOON</h1>
+    <p>القمر، البحر، والابتكار التقني. معرضي ومنتجاتي في مكان واحد.</p>
     
-    <h1 class="title">N 1 M O O N</h1>
-    <p class="tagline">THE DIGITAL INNER REFLECTION</p>
-
-    <!-- روابط المتجر -->
-    <a href="https://n1moon-shop.fourthwall.com" class="btn">متجر المنتجات | Shop Products</a>
-    <a href="https://www.saatchiart.com/nouhart" class="btn">معرض اللوحات | Art Gallery</a>
-
-    <!-- قسم التواصل -->
-    <div class="contact-section">
-        <p style="color:#555; margin-bottom:20px;">تواصل معنا للطلبات والاستفسارات</p>
-        <a href="https://x.com/MourchidiN25201" class="social-btn">X (Twitter)</a>
-        <a href="mailto:mourchidinouh@gmail.com" class="social-btn">Email</a>
-        <a href="tel:+212700450691" class="social-btn">Call: 0700450691</a>
+    <div class="btn-container">
+        <a href="https://n1moon-shop.fourthwall.com/" class="btn btn-shop">متجر المنتجات (Fourthwall)</a>
+        <a href="https://www.saatchiart.com/nouhart" class="btn btn-art">المعرض الفني (Saatchi Art)</a>
     </div>
 
 </body>
