@@ -3,55 +3,45 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>N1MOON | Risk & Innovation</title>
+    <title>N1MOON | Identity</title>
     <style>
-        /* تصميم هندسي وتقني */
-        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', Arial, sans-serif; background: #050505; color: #fff; overflow: hidden; }
-        
-        /* خلفية هندسية */
-        .tech-bg {
-            position: absolute; width: 100%; height: 100%;
-            background-image: radial-gradient(circle at 50% 50%, #001a33 0%, #050505 70%);
-            z-index: -1;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            background-color: #0a0a0a; 
+            color: #e0e0e0; 
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-
-        .container {
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-            height: 100vh; text-align: center;
+        .canvas {
+            border: 1px solid #333;
+            padding: 60px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
         }
-
-        /* الشعار والنصوص */
-        h1 { font-size: 3.5rem; margin: 0; letter-spacing: 8px; color: #00d4ff; text-shadow: 0 0 20px #00d4ff; }
-        .sub-title { font-size: 1.2rem; color: #aaa; margin-top: 10px; letter-spacing: 2px; }
-        .dual-lang { font-size: 1.5rem; margin-top: 20px; font-weight: bold; }
-
-        /* منطقة الأزرار */
-        .actions { margin-top: 40px; display: flex; gap: 20px; }
-        .btn {
-            padding: 15px 30px; border: 1px solid #00d4ff; background: transparent;
-            color: #00d4ff; cursor: pointer; transition: 0.3s; text-decoration: none;
-            text-transform: uppercase; font-weight: bold;
-        }
-        .btn:hover { background: #00d4ff; color: #000; }
+        h1 { font-size: 2.5rem; letter-spacing: 12px; margin-bottom: 20px; color: #fff; }
+        .divider { height: 1px; width: 60px; background: #555; margin: 30px auto; }
+        .dual-text { font-size: 1.1rem; line-height: 2; color: #888; text-transform: uppercase; letter-spacing: 4px; }
+        .nav { margin-top: 50px; display: flex; justify-content: center; gap: 40px; }
+        a { color: #fff; text-decoration: none; font-size: 0.8rem; border-bottom: 1px solid transparent; transition: 0.3s; }
+        a:hover { border-bottom: 1px solid #fff; }
     </style>
 </head>
 <body>
 
-    <div class="tech-bg"></div>
-
-    <div class="container">
+    <div class="canvas">
         <h1>N1MOON</h1>
-        <div class="sub-title">إدارة المخاطر والابتكار التقني</div>
-        <div class="sub-title">Risk Management and Technical Innovation</div>
-        
-        <div class="dual-lang">
-            القمر وبحر <br>
+        <div class="divider"></div>
+        <div class="dual-text">
+            القمر وبحر<br>
             Moon and Sea
         </div>
-
-        <div class="actions">
-            <a href="https://n1moon-shop.fourthwall.com/" class="btn">المتجر | Store</a>
-            <a href="https://www.saatchiart.com/nouhart" class="btn">المعرض | Gallery</a>
+        <div class="nav">
+            <a href="https://n1moon-shop.fourthwall.com/">SHOP</a>
+            <a href="https://www.saatchiart.com/nouhart">GALLERY</a>
         </div>
     </div>
 
