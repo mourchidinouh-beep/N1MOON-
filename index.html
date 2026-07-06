@@ -2,59 +2,70 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>N1MOON | الهوية والاتصال</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1MOON | Moon and Sea</title>
     <style>
-        body { 
-            margin: 0; 
-            background: linear-gradient(135deg, #000000, #001220); 
-            color: #fff; 
-            font-family: 'Segoe UI', sans-serif; 
-            display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            min-height: 100vh; text-align: center; 
+        body, html { margin: 0; padding: 0; height: 100%; font-family: 'Segoe UI', sans-serif; color: #fff; }
+        
+        .hero {
+            height: 100vh;
+            background-image: url('ضع_رابط_الصورة_هنا');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #000;
+        }
+
+        h1 { font-size: 3rem; margin-bottom: 30px; text-shadow: 0 0 20px #0055FF; }
+
+        .btn-group { display: flex; flex-direction: column; gap: 15px; width: 250px; }
+        
+        .btn {
+            padding: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.4s;
+            cursor: pointer;
+            border: 1px solid #0055FF;
+            background: rgba(0, 85, 255, 0.2);
+            color: white;
         }
         
-        .container { max-width: 600px; padding: 20px; }
-        
-        /* تأثير الشعار */
-        .brand-logo { 
-            font-size: 3rem; font-weight: bold; color: #0055FF; 
-            margin-bottom: 10px; text-shadow: 0 0 15px #0055FF;
+        .btn:hover { background: #0055FF; }
+
+        #contact-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            display: none;
         }
-        
-        .description { color: #ccc; margin-bottom: 40px; line-height: 1.6; }
-        
-        /* الأزرار الرئيسية */
-        .btn-group { display: flex; flex-direction: column; gap: 15px; margin-bottom: 40px; }
-        .btn { padding: 15px 30px; border-radius: 30px; text-decoration: none; font-weight: bold; transition: 0.3s; }
-        .btn-blue { background: #0055FF; color: white; }
-        .btn-silver { border: 1px solid #C0C0C0; color: #C0C0C0; }
-        
-        /* قسم الاتصال المخفي (يظهر عند الطلب) */
-        #contact-info { display: none; margin-top: 20px; padding: 20px; background: #0a0a0a; border: 1px solid #0055FF; border-radius: 10px; }
-        .contact-item { margin: 10px 0; color: #fff; }
+
+        .contact-item { margin: 10px 0; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="brand-logo">N1MOON</div>
-        <p class="description">مساحة فنية وتقنية تجمع بين دقة العمل وجمال الرؤية. استكشف المعرض، تصفح المنتجات، وتواصل معي مباشرة.</p>
+    <div class="hero">
+        <h1>N1MOON</h1>
         
         <div class="btn-group">
-            <a href="https://n1moon-shop.fourthwall.com/" class="btn btn-blue">المتجر الإلكتروني</a>
-            <a href="https://www.saatchiart.com/nouhart" class="btn btn-silver">المعرض الفني</a>
-            <!-- زر إظهار بيانات الاتصال -->
-            <button onclick="document.getElementById('contact-info').style.display='block'" class="btn btn-silver" style="background:transparent;">تواصل معي</button>
+            <a href="https://n1moon-shop.fourthwall.com/" class="btn">المتجر الإلكتروني</a>
+            <a href="https://www.saatchiart.com/nouhart" class="btn">المعرض الفني</a>
+            <button class="btn" onclick="document.getElementById('contact-section').style.display='block'">تواصل معي</button>
         </div>
 
-        <div id="contact-info">
+        <div id="contact-section">
             <div class="contact-item">📧 mourchidinouh@gmail.com</div>
             <div class="contact-item">📞 0700450691</div>
-            <div class="contact-item">💬 <a href="https://wa.me/212700450691" style="color:#0055FF;">اضغط هنا للمراسلة عبر واتساب</a></div>
+            <div class="contact-item">💬 <a href="https://wa.me/212700450691" style="color:#0055FF; text-decoration:none;">مراسلة واتساب</a></div>
         </div>
     </div>
 
 </body>
 </html>
-
-        
