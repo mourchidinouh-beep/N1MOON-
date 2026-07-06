@@ -2,60 +2,55 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1MOON</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            background-color: #010409; /* اللون الأسود العميق */
+            background-color: #000000;
             color: #ffffff;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .n1moon-card {
+            font-family: sans-serif;
             text-align: center;
+            margin: 0;
             padding: 20px;
         }
-        .logo-icon {
-            font-size: 80px; /* حجم أكبر للأيقونة لتفرض حضورها */
-            margin-bottom: 20px;
+        .logo-img {
+            max-width: 200px;
+            margin-top: 20px;
+        }
+        h1 { letter-spacing: 5px; margin: 10px 0; }
+        .subtitle { color: #888; margin-bottom: 30px; }
+        .btn {
             display: block;
+            width: 80%;
+            max-width: 300px;
+            margin: 15px auto;
+            padding: 15px;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            text-decoration: none;
+            background: transparent;
         }
-        h1 {
-            font-size: 3.5rem;
-            letter-spacing: 15px; /* تباعد يعطي فخامة */
-            margin: 0;
-            font-weight: 300;
-        }
-        .text-group {
-            margin-top: 30px;
-        }
-        .arabic-text {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-            letter-spacing: 2px;
-        }
-        .english-text {
-            font-size: 1.2rem;
-            letter-spacing: 6px; /* تباعد يعطي طابعاً احترافياً */
-            color: #888;
-            text-transform: uppercase;
-        }
+        .contact-section { margin-top: 40px; color: #555; }
+        .contact-btns { display: flex; justify-content: center; gap: 10px; margin-top: 10px; }
+        .small-btn { padding: 10px 20px; border: 1px solid #555; color: #ccc; text-decoration: none; }
     </style>
 </head>
 <body>
+    <img src="1782592807389.png" class="logo-img" alt="Logo">
+    <h1>N 1 M O O N</h1>
+    <div class="subtitle">THE DIGITAL INNER REFLECTION</div>
 
-    <div class="n1moon-card">
-        <div class="logo-icon">💠</div> <!-- استبدلها بالأيقونة الخاصة بك -->
-        <h1>N1MOON</h1>
-        <div class="text-group">
-            <div class="arabic-text">القمر وبحر</div>
-            <div class="english-text">Moon and Sea</div>
+    <a href="#" class="btn">SHOP PRODUCTS | متجر المنتجات</a>
+    <a href="#" class="btn">ART GALLERY | معرض اللوحات</a>
+
+    <div class="contact-section">
+        <p>تواصل معنا للطلبات والاستفسارات</p>
+        <div class="contact-btns">
+            <a href="#" class="small-btn">Email</a>
+            <a href="#" class="small-btn">X (Twitter)</a>
         </div>
+        <br>
+        <a href="tel:0700450691" class="small-btn">Call: 0700450691</a>
     </div>
-
 </body>
 </html>
-
