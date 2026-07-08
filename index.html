@@ -16,18 +16,22 @@
         #gallery-modal { display:none; position:fixed; z-index:999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.98); overflow-y:auto; cursor:pointer; }
         .gallery-container { display: flex; flex-direction: column; align-items: center; padding: 50px 20px; }
         .gallery-container img { max-width: 90%; margin-bottom: 20px; border: 2px solid #fff; box-shadow: 0 0 15px rgba(255,255,255,0.2); }
+        .close-hint { color: #888; font-size: 0.9em; margin-top: 10px; }
     </style>
 </head>
 <body>
 
-    <img src="1782592807389.png" class="logo-img" alt="N1MOON Official Emblem">
+    <!-- اللوغو الجديد -->
+    <img src="Logon1moon.png" class="logo-img" alt="N1MOON Official Emblem">
+    
     <h1>N 1 M O O N</h1>
     <div class="subtitle">THE DIGITAL INNER REFLECTION</div>
 
+    <!-- الروابط -->
     <a href="https://n1moon-shop.fourthwall.com/" class="btn">SHOP PRODUCTS | متجر المنتجات</a>
     <a href="https://www.saatchiart.com/nouhart" class="btn">ART GALLERY | معرض اللوحات</a>
     
-    <!-- الزر الذي يفتح الصورتين معاً -->
+    <!-- الزر الذي يفتح الصورتين -->
     <a href="#" onclick="document.getElementById('gallery-modal').style.display='block'" class="btn">عرض تصاميم الجاكيتات</a>
 
     <!-- المعرض المخفي -->
@@ -35,7 +39,8 @@
         <div class="gallery-container">
             <img src="jacket.n1moon1.png" alt="Jacket 1">
             <img src="1782879948443.png" alt="Jacket 2">
-            <p style="color:#888;">اضغط في أي مكان للإغلاق</p>
+            <!-- العبارة المطلوبة -->
+            <p class="close-hint">اضغط في أي مكان للإغلاق | Click anywhere to close</p>
         </div>
     </div>
 
