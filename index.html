@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N1MOON</title>
-    <!-- الأيقونة الخاصة بك -->
     <link rel="icon" href="Logon1moon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
@@ -20,11 +19,16 @@
         .modal-content img { width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid #444; }
         .close-btn { color: #fff; font-size: 3em; position: fixed; top: 10px; right: 30px; cursor: pointer; z-index: 1001; }
 
+        /* تنسيق الخيط الروحي */
+        .soul-container { max-width: 600px; margin: 80px auto; text-align: center; }
+        .story-item { margin-bottom: 80px; }
+        .story-item img { width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(255,255,255,0.1); }
+        .ar-text { margin-top: 20px; font-size: 1.3em; font-weight: bold; }
+        .en-text { color: #aaa; font-style: italic; margin-top: 5px; }
+
         #full-view-modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); flex-direction: column; justify-content: center; align-items: center; }
         #full-img { max-width: 90%; max-height: 50%; border: 2px solid #fff; border-radius: 10px; }
         .story-text { color: #fff; width: 85%; margin-top: 20px; font-size: 1.1em; line-height: 1.6; }
-        .ar-text { color: #fff; margin-bottom: 10px; }
-        .en-text { color: #aaa; font-style: italic; }
         .close-overlay { margin-top: 30px; cursor: pointer; border: 1px solid #fff; padding: 10px 30px; border-radius: 5px; }
         .close-overlay:hover { background: #fff; color: #000; }
 
@@ -45,28 +49,61 @@
     <a href="https://www.saatchiart.com/nouhart" class="btn">ART GALLERY | معرض اللوحات</a>
     <div class="btn" onclick="document.getElementById('jacket-modal').style.display='block'">VIEW JACKIE PUFFER | عرض JACKIE</div>
     <div class="btn" onclick="document.getElementById('moon-modal').style.display='block'">LUNAR ASTRONOMY | معرض الفلك القمري</div>
+    <!-- الزر الجديد -->
+    <div class="btn" onclick="document.getElementById('soul-modal').style.display='block'" style="border-color: #ffd700; color: #ffd700;">MY SPIRITUAL THREAD | مسار الروح</div>
 
+    <!-- نافذة jacket-modal -->
     <div id="jacket-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="modal-content">
-            <img src="jacket.n1moon1.png" onclick="openFullImage(this.src, 'ياقة (High Collar) صُممت بهندسة دائرية متقنة لتتجاوز كونها مجرد قطعة ملابس؛ إنها هالة هندسية تحتضن ملامحك، حيث يلتقي دفء الحماية المطلقة بهدوء الفن الرصين، لتمنحك حضوراً يعكس ثقةً وازنة وتناغماً بصرياً فريداً يرافق خطواتك في كل تفاصيل يومك.', 'A high collar (High Collar) designed with precise circular geometry that transcends mere clothing; it is a geometric halo embracing your features, where the warmth of ultimate protection meets the serenity of refined art, granting you a presence that reflects composed confidence and a unique visual harmony accompanying your every step throughout the day.')" oncontextmenu="return false;">
-            <img src="1782879948443.png" onclick="openFullImage(this.src, 'ياقة (High Collar) صُممت بهندسة دائرية متقنة لتتجاوز كونها مجرد قطعة ملابس؛ إنها هالة هندسية تحتضن ملامحك، حيث يلتقي دفء الحماية المطلقة بهدوء الفن الرصين، لتمنحك حضوراً يعكس ثقةً وازنة وتناغماً بصرياً فريداً يرافق خطواتك في كل تفاصيل يومك.', 'A high collar (High Collar) designed with precise circular geometry that transcends mere clothing; it is a geometric halo embracing your features, where the warmth of ultimate protection meets the serenity of refined art, granting you a presence that reflects composed confidence and a unique visual harmony accompanying your every step throughout the day.')" oncontextmenu="return false;">
+            <img src="jacket.n1moon1.png" onclick="openFullImage(this.src, 'ياقة هندسية...', 'High Collar design...')">
+            <img src="1782879948443.png" onclick="openFullImage(this.src, 'ياقة هندسية...', 'High Collar design...')">
         </div>
     </div>
 
+    <!-- نافذة moon-modal -->
     <div id="moon-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="modal-content">
-            <img src="IMG_20260702_231349~2.jpg" onclick="openFullImage(this.src, 'عندما يكتمل القمر، تكتمل الرؤية.', 'When the moon is full, the vision is complete.')" oncontextmenu="return false;">
-            <img src="IMG_20260702_231200~2.jpg" onclick="openFullImage(this.src, 'الهلال رمز للأمل، وبداية دورة جديدة.', 'The crescent is a symbol of hope and a new cycle.')" oncontextmenu="return false;">
-            <img src="IMG_20260630_232303~2.jpg" onclick="openFullImage(this.src, 'مهما تكاثرت الغيوم، ستظل روحك هي القمر.', 'No matter how many clouds gather, your spirit remains the moon.')" oncontextmenu="return false;">
-            <img src="IMG_20260629_010318~2.jpg" onclick="openFullImage(this.src, 'كل ظل على سطح القمر هو تجربة، وكل فوهة هي ذكرى.', 'Every shadow on the moon is an experience, and every crater is a memory.')" oncontextmenu="return false;">
-            <img src="IMG_20260629_005016~2.jpg" onclick="openFullImage(this.src, 'ضوء خافت في ليلة عميقة، يذكرنا أن الهدوء قوة.', 'A faint light in a deep night, reminding us that tranquility is strength.')" oncontextmenu="return false;">
-            <img src="IMG_20260621_002624~2.jpg" onclick="openFullImage(this.src, 'تأمل في سكون الكون، حيث لا شيء صعب.', 'Meditation in the silence of the universe.')" oncontextmenu="return false;">
-            <img src="IMG_20260619_234330~2.jpg" onclick="openFullImage(this.src, 'القمر يراقب الأرض، ونحن نراقب أنفسنا من خلاله.', 'The moon watches the Earth, and we watch ourselves through it.')" oncontextmenu="return false;">
+            <img src="IMG_20260702_231349~2.jpg" onclick="openFullImage(this.src, 'عندما يكتمل القمر، تكتمل الرؤية.', 'When the moon is full, the vision is complete.')">
+            <img src="IMG_20260702_231200~2.jpg" onclick="openFullImage(this.src, 'الهلال رمز للأمل.', 'The crescent is a symbol of hope.')">
+            <img src="IMG_20260630_232303~2.jpg" onclick="openFullImage(this.src, 'مهما تكاثرت الغيوم، ستظل روحك هي القمر.', 'No matter how many clouds gather, your spirit remains the moon.')">
+            <img src="IMG_20260629_010318~2.jpg" onclick="openFullImage(this.src, 'كل ظل على سطح القمر هو تجربة.', 'Every shadow on the moon is an experience.')">
+            <img src="IMG_20260629_005016~2.jpg" onclick="openFullImage(this.src, 'ضوء خافت في ليلة عميقة.', 'A faint light in a deep night.')">
+            <img src="IMG_20260621_002624~2.jpg" onclick="openFullImage(this.src, 'تأمل في سكون الكون.', 'Meditation in the silence of the universe.')">
+            <img src="IMG_20260619_234330~2.jpg" onclick="openFullImage(this.src, 'القمر يراقب الأرض.', 'The moon watches the Earth.')">
         </div>
     </div>
 
+    <!-- نافذة الخيط الروحي الجديدة -->
+    <div id="soul-modal" class="modal">
+        <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
+        <div class="soul-container">
+            <h2 style="margin-bottom: 50px;">مسار الروح | THE SOUL'S PATH</h2>
+            <div class="story-item">
+                <img src="Messenger_creation_191854465336767.jpg" alt="البدايات">
+                <div class="ar-text">منذ 2017، بدأت الرحلة؛ خيط رفيع يربط روحي بسكون الأرض.</div>
+                <div class="en-text">From here the pact began; years of silent reflection between me and the earth.</div>
+            </div>
+            <div class="story-item">
+                <img src="IMG_20260616_204640.jpg" alt="القمر">
+                <div class="ar-text">القمر.. المحرك الصامت الذي يأمر المد والجزر، وهو البوصلة التي توجه كياني.</div>
+                <div class="en-text">The Moon.. the silent mover that commands the tides, and the compass guiding my being.</div>
+            </div>
+            <div class="story-item">
+                <img src="IMG_20260616_205243.jpg" alt="البحر">
+                <div class="ar-text">البحر يستجيب، وفي حركة المد والجزر، أرى انعكاساً لنبض روحي المستمر.</div>
+                <div class="en-text">The Sea responds; and in the rhythm of the tides, I see a reflection of my own constant pulse.</div>
+            </div>
+            <div class="story-item">
+                <img src="IMG_20260621_002624~2.jpg" alt="الاتحاد">
+                <div class="ar-text">أنا ذلك الخيط؛ بين تجاذب القمر وانفتاح البحر، وجدت حقيقتي.</div>
+                <div class="en-text">I am that thread; between the moon’s pull and the sea’s expanse, I found my truth.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة العرض الكامل (Overlay) -->
     <div id="full-view-modal">
         <img id="full-img" src="">
         <div id="image-story" class="story-text"></div>
@@ -76,7 +113,7 @@
     <script>
         function openFullImage(src, ar, en) {
             document.getElementById('full-img').src = src;
-            document.getElementById('image-story').innerHTML = '<div class="ar-text">' + ar + '</div><div class="en-text">' + en + '</div>';
+            document.getElementById('image-story').innerHTML = '<div style="margin-bottom:10px;">' + ar + '</div><div style="color:#aaa; font-style:italic;">' + en + '</div>';
             document.getElementById('full-view-modal').style.display = 'flex';
         }
     </script>
