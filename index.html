@@ -21,7 +21,7 @@
         .modal-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1000px; margin: 50px auto; }
         .modal-content img { width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid #444; }
         .close-btn { color: #fff; font-size: 3em; position: fixed; top: 10px; right: 30px; cursor: pointer; z-index: 1001; }
-        .soul-container { max-width: 700px; margin: 80px auto; text-align: center; }
+        .soul-container { max-width: 800px; margin: 80px auto; text-align: center; }
         .story-item { margin-bottom: 80px; }
         .story-item img { width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(255,255,255,0.1); }
         .ar-text { margin-top: 20px; font-size: 1.3em; font-weight: bold; }
@@ -45,7 +45,9 @@
     <div class="btn" onclick="document.getElementById('jacket-modal').style.display='block'">VIEW JACKIE PUFFER | عرض JACKIE</div>
     <div class="btn" onclick="document.getElementById('moon-modal').style.display='block'">LUNAR ASTRONOMY | معرض الفلك القمري</div>
     <div class="btn" onclick="document.getElementById('soul-modal').style.display='block'" style="border-color: #ffd700; color: #ffd700;">MY SPIRITUAL THREAD | مسار الروح</div>
-    <div class="btn sea-btn-pulse" style="border: 2px solid #00d4ff; color: #00d4ff; font-weight: bold;" onclick="document.getElementById('sea-modal').style.display='block'">HEAR THE SEA'S CRY | اسمع صرخة البحر</div>
+    
+    <!-- زر التحذير الأزرق الجديد -->
+    <div class="btn sea-btn-pulse" style="border: 2px solid #00d4ff; color: #00d4ff; font-weight: bold; font-size: 1.2em;" onclick="document.getElementById('sea-modal').style.display='block'">⚠️ SEA'S WARNING | تحذير البحر</div>
 
     <!-- نافذة Jacket -->
     <div id="jacket-modal" class="modal"><span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span><div class="modal-content">
@@ -68,19 +70,29 @@
         <div class="story-item"><img src="Messenger_creation_191854465336767.jpg"><div class="ar-text">منذ 2017، بدأت الرحلة؛ خيط رفيع يربط روحي بسكون الأرض.</div></div>
         <div class="close-overlay" onclick="document.getElementById('soul-modal').style.display='none'">BACK | إغلاق</div></div></div>
 
-    <!-- نافذة صرخة البحر -->
-    <div id="sea-modal" class="modal"><span class="close-btn" style="color:#00d4ff;" onclick="document.getElementById('sea-modal').style.display='none'">&times;</span><div class="soul-container">
-        <h2 style="color: #00d4ff; margin-bottom: 30px;">صرخة البحر | THE SEA'S CRY</h2>
-        <div style="border: 2px solid #00d4ff; padding: 30px; border-radius: 20px; background: rgba(0, 212, 255, 0.05); text-align: center;">
-            <p style="font-size: 1.3em; color: #ff3333; font-weight: bold; line-height: 1.6; margin-bottom: 30px; direction: rtl;">"تحذير: البحر ليس مكباً لنفاياتكم، ولا مسرحاً لجهلكم. إن استمراركم في تدنيس مياهه هو إعلان حرب على الحياة نفسها، والطبيعة لا تعرف الرحمة حين تنتقم. توقفوا، قبل أن يبتلع غضب البحر ما تبقّى من إنسانيتكم."</p>
-            <p style="font-size: 1.1em; color: #ff6666; font-weight: bold; line-height: 1.6; margin-bottom: 40px; direction: ltr;">"WARNING: The sea is not your dumping ground, nor a stage for your ignorance. Continuing to desecrate its waters is a declaration of war against life itself. Nature shows no mercy when it strikes back. Stop, before the sea's wrath swallows what remains of your humanity."</p>
-            <div style="border-top: 1px solid #444; padding-top: 20px; margin-bottom: 30px;">
-                <p style="font-size: 1.1em; color: #00d4ff; line-height: 1.6; direction: rtl; margin-bottom: 20px;">"البحر هو نبض الحياة، وثرواته ليست ملكاً للمستغلين. إن نهب الكائنات البحرية وتدمير بيئاتها ليس مجرد تجارة، بل هو تدمير لمستقبلنا. نحن لا نطلب إحساناً، بل نطالب بالاحترام. البحر ليس أداة للاستغلال، وهذه صرخة لكل مسؤول ولكل فرد: توقفوا عن العبث بالبحر، لأن عواقب تدميره ستطال الجميع."</p>
+    <!-- نافذة صرخة وتحذير البحر المحدثة -->
+    <div id="sea-modal" class="modal">
+        <span class="close-btn" style="color:#00d4ff;" onclick="document.getElementById('sea-modal').style.display='none'">&times;</span>
+        <div class="soul-container">
+            <h2 style="color: #00d4ff; margin-bottom: 30px; font-size: 2em;">صرخة البحر | THE SEA'S CRY</h2>
+            <div style="border: 2px solid #00d4ff; padding: 40px; border-radius: 20px; background: rgba(0, 0, 0, 0.9); text-align: center;">
+                
+                <p style="font-size: 1.6em; color: #ff3333; font-weight: bold; line-height: 1.6; margin-bottom: 40px; direction: rtl;">⚠️ تحذير: البحر ليس مكباً لنفاياتكم، ولا مسرحاً لجهلكم. إن استمراركم في تدنيس مياهه هو إعلان حرب على الحياة نفسها، والطبيعة لا تعرف الرحمة حين تنتقم. توقفوا، قبل أن يبتلع غضب البحر ما تبقّى من إنسانيتكم.</p>
+                <p style="font-size: 1.4em; color: #ff3333; font-weight: bold; line-height: 1.6; margin-bottom: 50px; direction: ltr;">⚠️ WARNING: The sea is not your dumping ground, nor a stage for your ignorance. Continuing to desecrate its waters is a declaration of war against life itself. Nature shows no mercy when it strikes back. Stop, before the sea's wrath swallows what remains of your humanity.</p>
+
+                <div style="border-top: 1px solid #444; padding-top: 30px; margin-bottom: 30px;">
+                    <p style="font-size: 1.3em; color: #fff; line-height: 1.6; direction: rtl; margin-bottom: 20px;">البحر هو نبض الحياة، وثرواته ليست ملكاً للمستغلين. إن نهب الكائنات البحرية وتدمير بيئاتها ليس مجرد تجارة، بل هو تدمير لمستقبلنا. نحن لا نطلب إحساناً، بل نطالب بالاحترام. البحر ليس أداة للاستغلال، وتوقفوا عن العبث بالبحر.</p>
+                    <p style="font-size: 1.2em; color: #ccc; line-height: 1.6; direction: ltr;">The sea is the pulse of life, and its marine life is not for the exploiters to plunder. Over-exploiting marine resources and destroying their habitats is not just business; it is the destruction of our future. We are not asking for favors; we are demanding respect. The sea is not a tool for exploitation. Stop violating the sea.</p>
+                </div>
+
+                <div style="border-top: 1px solid #00d4ff; padding-top: 30px;">
+                    <p style="font-size: 1.2em; color: #00d4ff; font-style: italic; direction: rtl;">"أنا، نوح، أكتب هذه الكلمات كأمانة بيني وبين البحر، لأكون صوته لمن لا يسمع، وحارساً لجوهر الحياة. هذا عهدٌ لا يتجزأ."</p>
+                    <p style="font-size: 1.1em; color: #00d4ff; font-style: italic; direction: ltr;">"I, Nouh, write these words as a sacred pact between me and the sea—to be its voice for those who do not listen, and a guardian of the essence of life. This is a pact that shall not be broken."</p>
+                </div>
             </div>
-            <div style="border-top: 1px solid #00d4ff; padding-top: 20px;">
-                <p style="font-size: 1em; color: #00d4ff; font-style: italic; direction: rtl;">"أنا، نوح، أكتب هذه الكلمات كأمانة بيني وبين البحر، لأكون صوته لمن لا يسمع، وحارساً لجوهر الحياة. هذا عهدٌ لا يتجزأ."</p>
-            </div>
-        </div><div class="close-overlay" style="margin-top: 30px; border-color: #00d4ff; color: #00d4ff;" onclick="document.getElementById('sea-modal').style.display='none'">CLOSE | إغلاق</div></div></div>
+            <div class="close-overlay" style="margin-top: 30px; font-size: 1.2em; border-color: #00d4ff; color: #00d4ff;" onclick="document.getElementById('sea-modal').style.display='none'">CLOSE | إغلاق</div>
+        </div>
+    </div>
 
     <!-- نافذة العرض الكامل -->
     <div id="full-view-modal"><img id="full-img" src=""><div id="image-story" class="story-text"></div><div class="close-overlay" onclick="document.getElementById('full-view-modal').style.display='none'">CLOSE | إغلاق</div></div>
