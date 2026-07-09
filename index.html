@@ -25,6 +25,13 @@
         .en-text { color: #aaa; font-style: italic; }
         .close-overlay { margin-top: 30px; cursor: pointer; border: 1px solid #fff; padding: 10px 30px; border-radius: 5px; }
         .close-overlay:hover { background: #fff; color: #000; }
+
+        /* تحسين العرض للشاشات الكبيرة */
+        @media screen and (min-width: 768px) {
+            .btn { width: 400px; font-size: 1.2em; padding: 20px; }
+            h1 { font-size: 4em; }
+            .modal-content { grid-template-columns: repeat(3, 1fr); max-width: 1200px; }
+        }
     </style>
 </head>
 <body>
@@ -64,6 +71,7 @@
         </div>
     </div>
 
+    <!-- النافذة الفردية -->
     <div id="full-view-modal">
         <img id="full-img" src="">
         <div id="image-story" class="story-text"></div>
@@ -78,12 +86,13 @@
         }
     </script>
 
-    <div style="margin-top: 60px; display: flex; flex-direction: column; align-items: center; gap: 15px;">
-        <a href="tel:+212700450691" style="color:#d3d3d3; text-decoration:none;">+212 700450691</a>
-        <a href="https://x.com/MourchidiN25201" target="_blank" style="color:#d3d3d3; text-decoration:none;">X | MourchidiN25201</a>
-        <a href="mailto:mourchidinouh@gmail.com" style="color:#d3d3d3; text-decoration:none;">mourchidinouh@gmail.com</a>
+    <!-- معلومات التواصل المدمجة -->
+    <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
+        <a href="tel:+212700450691" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">+212 700450691</a>
+        <a href="https://x.com/MourchidiN25201" target="_blank" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">X | MourchidiN25201</a>
+        <a href="mailto:mourchidinouh@gmail.com" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">mourchidinouh@gmail.com</a>
     </div>
 
-    <div class="footer" style="color: #444; font-size: 0.8em; margin-top: 40px;">© 2026 N1MOON. All rights reserved.</div>
+    <div style="color: #444; font-size: 0.7em; margin-top: 20px; padding-bottom: 20px;">© 2026 N1MOON. All rights reserved.</div>
 </body>
 </html>
