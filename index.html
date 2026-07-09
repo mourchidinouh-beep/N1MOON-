@@ -19,7 +19,6 @@
         .modal-content img { width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid #444; }
         .close-btn { color: #fff; font-size: 3em; position: fixed; top: 10px; right: 30px; cursor: pointer; z-index: 1001; }
 
-        /* تنسيق الخيط الروحي */
         .soul-container { max-width: 600px; margin: 80px auto; text-align: center; }
         .story-item { margin-bottom: 80px; }
         .story-item img { width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(255,255,255,0.1); }
@@ -50,6 +49,9 @@
     <div class="btn" onclick="document.getElementById('jacket-modal').style.display='block'">VIEW JACKIE PUFFER | عرض JACKIE</div>
     <div class="btn" onclick="document.getElementById('moon-modal').style.display='block'">LUNAR ASTRONOMY | معرض الفلك القمري</div>
     <div class="btn" onclick="document.getElementById('soul-modal').style.display='block'" style="border-color: #ffd700; color: #ffd700;">MY SPIRITUAL THREAD | مسار الروح</div>
+    
+    <!-- زر رسالة البحر الجديد -->
+    <div class="btn" style="border: 2px solid #00d4ff; color: #00d4ff; font-weight: bold;" onclick="document.getElementById('sea-modal').style.display='block'">THE SEA'S MESSAGE | رسالة البحر</div>
 
     <!-- نافذة jacket-modal -->
     <div id="jacket-modal" class="modal">
@@ -79,27 +81,38 @@
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="soul-container">
             <h2 style="margin-bottom: 50px;">مسار الروح | THE SOUL'S PATH</h2>
+            <!-- محتوى الخيط الروحي -->
             <div class="story-item">
                 <img src="Messenger_creation_191854465336767.jpg" alt="البدايات">
                 <div class="ar-text">منذ 2017، بدأت الرحلة؛ خيط رفيع يربط روحي بسكون الأرض.</div>
                 <div class="en-text">From here the pact began; years of silent reflection between me and the earth.</div>
             </div>
-            <div class="story-item">
-                <img src="IMG_20260616_204640.jpg" alt="القمر">
-                <div class="ar-text">القمر.. المحرك الصامت الذي يأمر المد والجزر، وهو البوصلة التي توجه كياني.</div>
-                <div class="en-text">The Moon.. the silent mover that commands the tides.</div>
-            </div>
-            <div class="story-item">
-                <img src="IMG_20260616_205243.jpg" alt="البحر">
-                <div class="ar-text">البحر يستجيب، وفي حركة المد والجزر، أرى انعكاساً لنبض روحي المستمر.</div>
-                <div class="en-text">The Sea responds; a reflection of my own constant pulse.</div>
-            </div>
-            <div class="story-item">
-                <img src="IMG_20260621_002624~2.jpg" alt="الاتحاد">
-                <div class="ar-text">أنا ذلك الخيط؛ بين تجاذب القمر وانفتاح البحر، وجدت حقيقتي.</div>
-                <div class="en-text">I am that thread; I found my truth.</div>
-            </div>
             <div class="close-overlay" onclick="document.getElementById('soul-modal').style.display='none'">BACK | إغلاق</div>
+        </div>
+    </div>
+
+    <!-- نافذة رسالة البحر المتكاملة -->
+    <div id="sea-modal" class="modal">
+        <span class="close-btn" style="color:#00d4ff;" onclick="document.getElementById('sea-modal').style.display='none'">&times;</span>
+        <div class="soul-container" style="color: #fff;">
+            <h2 style="color: #00d4ff; margin-bottom: 30px; border-bottom: 1px solid #00d4ff; padding-bottom: 10px;">رسالة البحر | THE SEA'S MESSAGE</h2>
+            <div style="border: 2px solid #00d4ff; padding: 30px; border-radius: 20px; background: rgba(0, 212, 255, 0.05);">
+                <p style="font-size: 1.2em; color: #00d4ff; line-height: 1.8; margin-bottom: 30px; direction: rtl; text-align: right;">
+                    "البحر هو نبض الحياة على هذه الأرض. نحن لا نطلب إحساناً، بل نطالب بالاحترام. إن الاستمرار في تلوث البحار وتدمير كائناتها ليس مجرد خطأ، بل هو جريمة بحق أنفسنا وبحق الأجيال القادمة. البحر ليس أداة للاستغلال، والطبيعة عندما تغضب لا تفرق بين أحد. هذه صرخة لكل مسؤول ولكل فرد: توقفوا عن العبث بالبحر، لأن عواقب تدميره ستطال الجميع، ولن يستثنى أحدٌ من حسابه."
+                </p>
+                <p style="font-size: 1.1em; color: #a0f0ff; line-height: 1.8; margin-bottom: 40px; direction: ltr; text-align: left;">
+                    "The sea is the pulse of life on this planet. We are not asking for favors; we are demanding respect. Continuing to pollute the oceans and destroy their marine life is not just a mistake; it is a crime against ourselves and future generations. The sea is not a tool for exploitation, and nature shows no mercy when it strikes back. This is a call to every official and every individual: Stop violating the sea, for the consequences of its destruction will reach everyone, and no one will be spared."
+                </p>
+                <div style="border-top: 1px solid #00d4ff; padding-top: 25px;">
+                    <p style="font-size: 1em; color: #00d4ff; font-style: italic; margin-bottom: 10px; direction: rtl;">
+                        "أنا، نوح، أكتب هذه الكلمات كأمانة بيني وبين البحر، لأكون صوته لمن لا يسمع، وحارساً لجوهر الحياة الذي يحفظه لنا. هذا عهدٌ لا يتجزأ."
+                    </p>
+                    <p style="font-size: 0.9em; color: #a0f0ff; font-style: italic; direction: ltr;">
+                        "I, Nouh, write these words as a sacred pact between me and the sea—to be its voice for those who do not listen, and a guardian of the essence of life it preserves for us. This is a pact that shall not be broken."
+                    </p>
+                </div>
+            </div>
+            <div class="close-overlay" style="margin-top: 30px; border-color: #00d4ff; color: #00d4ff;" onclick="document.getElementById('sea-modal').style.display='none'">CLOSE | إغلاق</div>
         </div>
     </div>
 
