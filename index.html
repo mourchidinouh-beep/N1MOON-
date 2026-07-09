@@ -29,7 +29,7 @@
         #full-view-modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); flex-direction: column; justify-content: center; align-items: center; }
         #full-img { max-width: 90%; max-height: 50%; border: 2px solid #fff; border-radius: 10px; }
         .story-text { color: #fff; width: 85%; margin-top: 20px; font-size: 1.1em; line-height: 1.6; }
-        .close-overlay { margin-top: 30px; cursor: pointer; border: 1px solid #fff; padding: 10px 30px; border-radius: 5px; }
+        .close-overlay { margin: 30px auto; cursor: pointer; border: 1px solid #fff; padding: 10px 30px; border-radius: 30px; width: fit-content; transition: 0.3s; }
         .close-overlay:hover { background: #fff; color: #000; }
 
         @media screen and (min-width: 768px) {
@@ -49,15 +49,14 @@
     <a href="https://www.saatchiart.com/nouhart" class="btn">ART GALLERY | معرض اللوحات</a>
     <div class="btn" onclick="document.getElementById('jacket-modal').style.display='block'">VIEW JACKIE PUFFER | عرض JACKIE</div>
     <div class="btn" onclick="document.getElementById('moon-modal').style.display='block'">LUNAR ASTRONOMY | معرض الفلك القمري</div>
-    <!-- الزر الجديد -->
     <div class="btn" onclick="document.getElementById('soul-modal').style.display='block'" style="border-color: #ffd700; color: #ffd700;">MY SPIRITUAL THREAD | مسار الروح</div>
 
     <!-- نافذة jacket-modal -->
     <div id="jacket-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="modal-content">
-            <img src="jacket.n1moon1.png" onclick="openFullImage(this.src, 'ياقة هندسية...', 'High Collar design...')">
-            <img src="1782879948443.png" onclick="openFullImage(this.src, 'ياقة هندسية...', 'High Collar design...')">
+            <img src="jacket.n1moon1.png" onclick="openFullImage(this.src, 'ياقة هندسية صُممت بدقة.', 'High Collar design.')">
+            <img src="1782879948443.png" onclick="openFullImage(this.src, 'ياقة هندسية صُممت بدقة.', 'High Collar design.')">
         </div>
     </div>
 
@@ -65,17 +64,17 @@
     <div id="moon-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="modal-content">
-            <img src="IMG_20260702_231349~2.jpg" onclick="openFullImage(this.src, 'عندما يكتمل القمر، تكتمل الرؤية.', 'When the moon is full, the vision is complete.')">
+            <img src="IMG_20260702_231349~2.jpg" onclick="openFullImage(this.src, 'عندما يكتمل القمر، تكتمل الرؤية.', 'When the moon is full.')">
             <img src="IMG_20260702_231200~2.jpg" onclick="openFullImage(this.src, 'الهلال رمز للأمل.', 'The crescent is a symbol of hope.')">
-            <img src="IMG_20260630_232303~2.jpg" onclick="openFullImage(this.src, 'مهما تكاثرت الغيوم، ستظل روحك هي القمر.', 'No matter how many clouds gather, your spirit remains the moon.')">
-            <img src="IMG_20260629_010318~2.jpg" onclick="openFullImage(this.src, 'كل ظل على سطح القمر هو تجربة.', 'Every shadow on the moon is an experience.')">
-            <img src="IMG_20260629_005016~2.jpg" onclick="openFullImage(this.src, 'ضوء خافت في ليلة عميقة.', 'A faint light in a deep night.')">
-            <img src="IMG_20260621_002624~2.jpg" onclick="openFullImage(this.src, 'تأمل في سكون الكون.', 'Meditation in the silence of the universe.')">
+            <img src="IMG_20260630_232303~2.jpg" onclick="openFullImage(this.src, 'روحك هي القمر.', 'Your spirit remains the moon.')">
+            <img src="IMG_20260629_010318~2.jpg" onclick="openFullImage(this.src, 'كل ظل هو تجربة.', 'Every shadow is an experience.')">
+            <img src="IMG_20260629_005016~2.jpg" onclick="openFullImage(this.src, 'الهدوء قوة.', 'Tranquility is strength.')">
+            <img src="IMG_20260621_002624~2.jpg" onclick="openFullImage(this.src, 'تأمل في سكون الكون.', 'Meditation in silence.')">
             <img src="IMG_20260619_234330~2.jpg" onclick="openFullImage(this.src, 'القمر يراقب الأرض.', 'The moon watches the Earth.')">
         </div>
     </div>
 
-    <!-- نافذة الخيط الروحي الجديدة -->
+    <!-- نافذة الخيط الروحي -->
     <div id="soul-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="soul-container">
@@ -88,22 +87,23 @@
             <div class="story-item">
                 <img src="IMG_20260616_204640.jpg" alt="القمر">
                 <div class="ar-text">القمر.. المحرك الصامت الذي يأمر المد والجزر، وهو البوصلة التي توجه كياني.</div>
-                <div class="en-text">The Moon.. the silent mover that commands the tides, and the compass guiding my being.</div>
+                <div class="en-text">The Moon.. the silent mover that commands the tides.</div>
             </div>
             <div class="story-item">
                 <img src="IMG_20260616_205243.jpg" alt="البحر">
                 <div class="ar-text">البحر يستجيب، وفي حركة المد والجزر، أرى انعكاساً لنبض روحي المستمر.</div>
-                <div class="en-text">The Sea responds; and in the rhythm of the tides, I see a reflection of my own constant pulse.</div>
+                <div class="en-text">The Sea responds; a reflection of my own constant pulse.</div>
             </div>
             <div class="story-item">
                 <img src="IMG_20260621_002624~2.jpg" alt="الاتحاد">
                 <div class="ar-text">أنا ذلك الخيط؛ بين تجاذب القمر وانفتاح البحر، وجدت حقيقتي.</div>
-                <div class="en-text">I am that thread; between the moon’s pull and the sea’s expanse, I found my truth.</div>
+                <div class="en-text">I am that thread; I found my truth.</div>
             </div>
+            <div class="close-overlay" onclick="document.getElementById('soul-modal').style.display='none'">BACK | إغلاق</div>
         </div>
     </div>
 
-    <!-- نافذة العرض الكامل (Overlay) -->
+    <!-- نافذة العرض الكامل -->
     <div id="full-view-modal">
         <img id="full-img" src="">
         <div id="image-story" class="story-text"></div>
