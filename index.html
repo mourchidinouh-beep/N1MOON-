@@ -4,88 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N1MOON</title>
-    <!-- استدعاء الأيقونات -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body { background-color: #000000; color: #ffffff; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
         .logo-img { max-width: 250px; margin-top: 20px; border-radius: 10px; }
         h1 { letter-spacing: 5px; margin: 10px 0; }
         .subtitle { color: #888; margin-bottom: 30px; }
-        .btn { display: block; width: 80%; max-width: 300px; margin: 15px auto; padding: 15px; border: 1px solid #ffffff; color: #ffffff; text-decoration: none; background: transparent; transition: 0.3s; }
-        .btn:hover { background: #ffffff; color: #000000; cursor: pointer; }
+        .btn { display: block; width: 80%; max-width: 300px; margin: 15px auto; padding: 15px; border: 1px solid #ffffff; color: #ffffff; text-decoration: none; background: transparent; cursor: pointer; transition: 0.3s; }
+        .btn:hover { background: #ffffff; color: #000000; }
 
-        /* تصميم المعرض الجديد */
-        .gallery-section { margin-top: 50px; padding: 20px; border-top: 1px solid #333; }
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; }
-        .moon-item { text-align: center; background: #111; padding: 10px; border-radius: 8px; }
-        .moon-item img { width: 100%; border-radius: 5px; cursor: pointer; transition: 0.3s; }
-        .moon-item img:hover { transform: scale(1.05); }
-        .moon-item p { font-size: 0.75em; color: #888; margin-top: 8px; }
-
-        /* النافذة الكبيرة (Modal) */
-        #gallery-modal { display:none; position:fixed; z-index:999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); overflow-y:auto; cursor:pointer; }
-        .gallery-container { padding: 40px 20px; }
-        .close-hint { color: #888; margin-top: 20px; }
-
-        .contact-section { margin-top: 40px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
-        .contact-item a { text-decoration: none; color: #d3d3d3; display: flex; align-items: center; gap: 10px; font-size: 14px; }
-        .footer { color: #444; font-size: 0.8em; margin-top: 40px; padding-bottom: 20px; }
+        /* تصميم النوافذ المنبثقة */
+        .modal { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); overflow-y: auto; padding: 20px; }
+        .modal-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1000px; margin: 50px auto; }
+        .modal-content img { width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid #444; }
+        .close-btn { color: #fff; font-size: 3em; position: fixed; top: 10px; right: 30px; cursor: pointer; z-index: 1001; }
+        
+        .contact-section { margin-top: 60px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        .contact-item a { text-decoration: none; color: #d3d3d3; font-size: 14px; }
+        .footer { color: #444; font-size: 0.8em; margin-top: 40px; }
     </style>
 </head>
 <body>
 
-    <!-- اللوغو -->
-    <img src="Logon1moon.png" class="logo-img" alt="N1MOON Official Emblem">
+    <img src="Logon1moon.png" class="logo-img" alt="N1MOON">
     <h1>N 1 M O O N</h1>
     <div class="subtitle">THE DIGITAL INNER REFLECTION</div>
 
-    <!-- الروابط -->
+    <!-- الأزرار -->
     <a href="https://n1moon-shop.fourthwall.com/" class="btn">SHOP PRODUCTS | متجر المنتجات</a>
     <a href="https://www.saatchiart.com/nouhart" class="btn">ART GALLERY | معرض اللوحات</a>
-    
-    <!-- قسم المعرض القمري -->
-    <div class="gallery-section">
-        <h2 style="font-size: 1.5em; margin-bottom: 10px;">LUNAR ASTRONOMY GALLERY</h2>
-        <p style="color: #666; font-style: italic;">Lunar Moments: Captured between Agadir and Dakhla.<br>لحظات قمرية: التقطت بين أكادير والداخلة.</p>
-        
-        <div class="gallery-grid">
-            <!-- كررنا هذا القالب للصور الـ 10 -->
-            <div class="moon-item"><img src="IMG_20260702_231349~2.jpg" alt="Moon" onclick="showImage(this.src)" oncontextmenu="return false;"><p>My Lunar Encounter © 2026</p></div>
-            <div class="moon-item"><img src="IMG_20260702_231200~2.jpg" alt="Moon" onclick="showImage(this.src)" oncontextmenu="return false;"><p>My Lunar Encounter © 2026</p></div>
-            <div class="moon-item"><img src="IMG_20260630_232303~2.jpg" alt="Moon" onclick="showImage(this.src)" oncontextmenu="return false;"><p>My Lunar Encounter © 2026</p></div>
-            <div class="moon-item"><img src="IMG_20260629_010318~2.jpg" alt="Moon" onclick="showImage(this.src)" oncontextmenu="return false;"><p>My Lunar Encounter © 2026</p></div>
-            <div class="moon-item"><img src="IMG_20260629_005016~2.jpg" alt="Moon" onclick="showImage(this.src)" oncontextmenu="return false;"><p>My Lunar Encounter © 2026</p></div>
-            <div class="moon-item"><img src="IMG_20260621_002624~2.jpg" alt="Moon" onclick="showImage(this.src)" oncontextmenu="return false;"><p>My Lunar Encounter © 2026</p></div>
-            <div class="moon-item"><img src="IMG_20260619_234330~2.jpg" alt="Moon" onclick="showImage(this.src)" oncontextmenu="return false;"><p>My Lunar Encounter © 2026</p></div>
-            <div class="moon-item"><img src="IMG_20260602_232254~2.jpg" alt="Moon" onclick="showImage(this.src)" oncontextmenu="return false;"><p>My Lunar Encounter © 2026</p></div>
-            <div class="moon-item"><img src="IMG_20260521_004838~2.jpg" alt="Moon" onclick="showImage(this.src)" oncontextmenu="return false;"><p>My Lunar Encounter © 2026</p></div>
-            <div class="moon-item"><img src="IMG_20260510_031615~2.jpg" alt="Moon" onclick="showImage(this.src)" oncontextmenu="return false;"><p>My Lunar Encounter © 2026</p></div>
+    <div class="btn" onclick="document.getElementById('jacket-modal').style.display='block'">VIEW JACKIE PUFFER | عرض JACKIE</div>
+    <div class="btn" onclick="document.getElementById('moon-modal').style.display='block'">LUNAR ASTRONOMY GALLERY | معرض القمر</div>
+
+    <!-- معرض الجاكيتات -->
+    <div id="jacket-modal" class="modal">
+        <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
+        <div class="modal-content">
+            <img src="jacket.n1moon1.png" oncontextmenu="return false;">
+            <img src="1782879948443.png" oncontextmenu="return false;">
         </div>
     </div>
 
-    <!-- النافذة الكبيرة (Modal) -->
-    <div id="gallery-modal" onclick="this.style.display='none'">
-        <div class="gallery-container">
-            <img id="modal-img" src="" alt="Full view" style="max-width: 90%; border: 2px solid #fff;">
-            <p class="close-hint">اضغط في أي مكان للإغلاق | Click anywhere to close</p>
+    <!-- معرض القمر -->
+    <div id="moon-modal" class="modal">
+        <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
+        <div class="modal-content">
+            <img src="IMG_20260702_231349~2.jpg" oncontextmenu="return false;">
+            <img src="IMG_20260702_231200~2.jpg" oncontextmenu="return false;">
+            <img src="IMG_20260630_232303~2.jpg" oncontextmenu="return false;">
+            <img src="IMG_20260629_010318~2.jpg" oncontextmenu="return false;">
+            <img src="IMG_20260629_005016~2.jpg" oncontextmenu="return false;">
+            <img src="IMG_20260621_002624~2.jpg" oncontextmenu="return false;">
+            <img src="IMG_20260619_234330~2.jpg" oncontextmenu="return false;">
+            <img src="IMG_20260602_232254~2.jpg" oncontextmenu="return false;">
+            <img src="IMG_20260521_004838~2.jpg" oncontextmenu="return false;">
+            <img src="IMG_20260510_031615~2.jpg" oncontextmenu="return false;">
         </div>
     </div>
 
-    <script>
-        function showImage(src) {
-            document.getElementById('modal-img').src = src;
-            document.getElementById('gallery-modal').style.display = 'block';
-        }
-    </script>
-
-    <!-- تواصل وحقوق -->
+    <!-- التواصل -->
     <div class="contact-section">
         <div class="contact-item"><a href="tel:+212700450691"><i class="fas fa-phone-alt"></i> +212 700450691</a></div>
         <div class="contact-item"><a href="https://x.com/MourchidiN25201" target="_blank"><i class="fab fa-twitter"></i> X | MourchidiN25201</a></div>
         <div class="contact-item"><a href="mailto:mourchidinouh@gmail.com"><i class="fas fa-envelope"></i> mourchidinouh@gmail.com</a></div>
     </div>
 
-    <div class="footer">© 2026 N1MOON. All rights reserved. Original Art & Design.</div>
+    <div class="footer">© 2026 N1MOON. All rights reserved.</div>
 
 </body>
 </html>
