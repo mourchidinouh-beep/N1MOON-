@@ -10,17 +10,20 @@
         .logo-img { max-width: 250px; margin-top: 20px; border-radius: 10px; }
         h1 { letter-spacing: 5px; margin: 10px 0; }
         .subtitle { color: #888; margin-bottom: 30px; }
-        .btn { display: block; width: 80%; max-width: 300px; margin: 15px auto; padding: 15px; border: 1px solid #ffffff; color: #ffffff; text-decoration: none; background: transparent; cursor: pointer; transition: 0.3s; }
+        .btn { display: block; width: 80%; max-width: 350px; margin: 15px auto; padding: 15px; border: 1px solid #ffffff; color: #ffffff; text-decoration: none; background: transparent; cursor: pointer; transition: 0.3s; font-size: 1em; }
         .btn:hover { background: #ffffff; color: #000000; }
 
-        /* تصميم النوافذ المنبثقة */
+        /* تنسيق المعارض */
         .modal { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); overflow-y: auto; padding: 20px; }
         .modal-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1000px; margin: 50px auto; }
         .modal-content img { width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid #444; }
         .close-btn { color: #fff; font-size: 3em; position: fixed; top: 10px; right: 30px; cursor: pointer; z-index: 1001; }
-        
+
+        /* نافذة الصورة الواحدة */
+        #full-view-modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); cursor: zoom-out; justify-content: center; align-items: center; }
+        #full-img { max-width: 90%; max-height: 90%; border: 3px solid #fff; border-radius: 10px; }
+
         .contact-section { margin-top: 60px; display: flex; flex-direction: column; align-items: center; gap: 15px; }
-        .contact-item a { text-decoration: none; color: #d3d3d3; font-size: 14px; }
         .footer { color: #444; font-size: 0.8em; margin-top: 40px; }
     </style>
 </head>
@@ -30,18 +33,17 @@
     <h1>N 1 M O O N</h1>
     <div class="subtitle">THE DIGITAL INNER REFLECTION</div>
 
-    <!-- الأزرار -->
     <a href="https://n1moon-shop.fourthwall.com/" class="btn">SHOP PRODUCTS | متجر المنتجات</a>
     <a href="https://www.saatchiart.com/nouhart" class="btn">ART GALLERY | معرض اللوحات</a>
     <div class="btn" onclick="document.getElementById('jacket-modal').style.display='block'">VIEW JACKIE PUFFER | عرض JACKIE</div>
-    <div class="btn" onclick="document.getElementById('moon-modal').style.display='block'">LUNAR ASTRONOMY GALLERY | معرض القمر</div>
+    <div class="btn" onclick="document.getElementById('moon-modal').style.display='block'">LUNAR ASTRONOMY | معرض الفلك القمري</div>
 
     <!-- معرض الجاكيتات -->
     <div id="jacket-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="modal-content">
-            <img src="jacket.n1moon1.png" oncontextmenu="return false;">
-            <img src="1782879948443.png" oncontextmenu="return false;">
+            <img src="jacket.n1moon1.png" onclick="openFullImage(this.src)" oncontextmenu="return false;">
+            <img src="1782879948443.png" onclick="openFullImage(this.src)" oncontextmenu="return false;">
         </div>
     </div>
 
@@ -49,27 +51,37 @@
     <div id="moon-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="modal-content">
-            <img src="IMG_20260702_231349~2.jpg" oncontextmenu="return false;">
-            <img src="IMG_20260702_231200~2.jpg" oncontextmenu="return false;">
-            <img src="IMG_20260630_232303~2.jpg" oncontextmenu="return false;">
-            <img src="IMG_20260629_010318~2.jpg" oncontextmenu="return false;">
-            <img src="IMG_20260629_005016~2.jpg" oncontextmenu="return false;">
-            <img src="IMG_20260621_002624~2.jpg" oncontextmenu="return false;">
-            <img src="IMG_20260619_234330~2.jpg" oncontextmenu="return false;">
-            <img src="IMG_20260602_232254~2.jpg" oncontextmenu="return false;">
-            <img src="IMG_20260521_004838~2.jpg" oncontextmenu="return false;">
-            <img src="IMG_20260510_031615~2.jpg" oncontextmenu="return false;">
+            <img src="IMG_20260702_231349~2.jpg" onclick="openFullImage(this.src)" oncontextmenu="return false;">
+            <img src="IMG_20260702_231200~2.jpg" onclick="openFullImage(this.src)" oncontextmenu="return false;">
+            <img src="IMG_20260630_232303~2.jpg" onclick="openFullImage(this.src)" oncontextmenu="return false;">
+            <img src="IMG_20260629_010318~2.jpg" onclick="openFullImage(this.src)" oncontextmenu="return false;">
+            <img src="IMG_20260629_005016~2.jpg" onclick="openFullImage(this.src)" oncontextmenu="return false;">
+            <img src="IMG_20260621_002624~2.jpg" onclick="openFullImage(this.src)" oncontextmenu="return false;">
+            <img src="IMG_20260619_234330~2.jpg" onclick="openFullImage(this.src)" oncontextmenu="return false;">
+            <img src="IMG_20260602_232254~2.jpg" onclick="openFullImage(this.src)" oncontextmenu="return false;">
+            <img src="IMG_20260521_004838~2.jpg" onclick="openFullImage(this.src)" oncontextmenu="return false;">
+            <img src="IMG_20260510_031615~2.jpg" onclick="openFullImage(this.src)" oncontextmenu="return false;">
         </div>
     </div>
 
-    <!-- التواصل -->
+    <!-- نافذة العرض الفردي -->
+    <div id="full-view-modal" onclick="this.style.display='none'">
+        <img id="full-img" src="">
+    </div>
+
+    <script>
+        function openFullImage(src) {
+            document.getElementById('full-img').src = src;
+            document.getElementById('full-view-modal').style.display = 'flex';
+        }
+    </script>
+
     <div class="contact-section">
-        <div class="contact-item"><a href="tel:+212700450691"><i class="fas fa-phone-alt"></i> +212 700450691</a></div>
-        <div class="contact-item"><a href="https://x.com/MourchidiN25201" target="_blank"><i class="fab fa-twitter"></i> X | MourchidiN25201</a></div>
-        <div class="contact-item"><a href="mailto:mourchidinouh@gmail.com"><i class="fas fa-envelope"></i> mourchidinouh@gmail.com</a></div>
+        <div class="contact-item"><a href="tel:+212700450691" style="color:#d3d3d3; text-decoration:none;">+212 700450691</a></div>
+        <div class="contact-item"><a href="https://x.com/MourchidiN25201" target="_blank" style="color:#d3d3d3; text-decoration:none;">X | MourchidiN25201</a></div>
+        <div class="contact-item"><a href="mailto:mourchidinouh@gmail.com" style="color:#d3d3d3; text-decoration:none;">mourchidinouh@gmail.com</a></div>
     </div>
 
     <div class="footer">© 2026 N1MOON. All rights reserved.</div>
-
 </body>
 </html>
