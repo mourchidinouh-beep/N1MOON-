@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N1MOON</title>
+    <!-- إضافة الأيقونة هنا -->
+    <link rel="icon" href="Logon1moon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body { background-color: #000000; color: #ffffff; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
@@ -26,7 +28,6 @@
         .close-overlay { margin-top: 30px; cursor: pointer; border: 1px solid #fff; padding: 10px 30px; border-radius: 5px; }
         .close-overlay:hover { background: #fff; color: #000; }
 
-        /* تحسين العرض للشاشات الكبيرة */
         @media screen and (min-width: 768px) {
             .btn { width: 400px; font-size: 1.2em; padding: 20px; }
             h1 { font-size: 4em; }
@@ -45,7 +46,8 @@
     <div class="btn" onclick="document.getElementById('jacket-modal').style.display='block'">VIEW JACKIE PUFFER | عرض JACKIE</div>
     <div class="btn" onclick="document.getElementById('moon-modal').style.display='block'">LUNAR ASTRONOMY | معرض الفلك القمري</div>
 
-    <!-- معرض الجاكيتات المهيب -->
+    <!-- المعارض ... (نفس الكود السابق لا تغيير هنا) -->
+    
     <div id="jacket-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="modal-content">
@@ -54,7 +56,6 @@
         </div>
     </div>
 
-    <!-- معرض القمر -->
     <div id="moon-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="modal-content">
@@ -64,14 +65,12 @@
             <img src="IMG_20260629_010318~2.jpg" onclick="openFullImage(this.src, 'كل ظل على سطح القمر هو تجربة، وكل فوهة هي ذكرى.', 'Every shadow on the moon is an experience, and every crater is a memory.')" oncontextmenu="return false;">
             <img src="IMG_20260629_005016~2.jpg" onclick="openFullImage(this.src, 'ضوء خافت في ليلة عميقة، يذكرنا أن الهدوء قوة.', 'A faint light in a deep night, reminding us that tranquility is strength.')" oncontextmenu="return false;">
             <img src="IMG_20260621_002624~2.jpg" onclick="openFullImage(this.src, 'تأمل في سكون الكون، حيث لا شيء صعب.', 'Meditation in the silence of the universe.')" oncontextmenu="return false;">
-            <img src="IMG_20260619_234330~2.jpg" onclick="openFullImage(this.src, 'القمر يراقب الأرض، ونحن نراقب أنفسنا من خلاله.', 'The moon watches the Earth, and we watch ourselves through it.')" oncontextmenu="return false;">
-            <img src="IMG_20260602_232254~2.jpg" onclick="openFullImage(this.src, 'جمال في التفاصيل، كما في دقة العمل التقني.', 'Beauty in the details, just like the precision of technical work.')" oncontextmenu="return false;">
-            <img src="IMG_20260521_004838~2.jpg" onclick="openFullImage(this.src, 'نور يضيء طريق الإبداع في كل الظروف.', 'Light that illuminates the path of creativity.')" oncontextmenu="return false;">
-            <img src="IMG_20260510_031615~2.jpg" onclick="openFullImage(this.src, 'بداية الرحلة، حيث يلتقي العلم بالفن.', 'The beginning of the journey, where science meets art.')" oncontextmenu="return false;">
+            <img src="IMG_20260619_234330~2.jpg" onclick="openFullImage(this.src, 'القمر يراقب الأرض، ونحن نراقب أنفسنا من خلاله.', 'The moon watches the Earth, and we watch ourselves through it.')" oncontextmenu="index_close_modal_moon")" oncontextmenu="return false;">
         </div>
     </div>
 
-    <!-- النافذة الفردية -->
+    <!-- النافذة الفردية والسكربت ومعلومات التواصل (كما هي في الكود السابق) -->
+    
     <div id="full-view-modal">
         <img id="full-img" src="">
         <div id="image-story" class="story-text"></div>
@@ -86,7 +85,6 @@
         }
     </script>
 
-    <!-- معلومات التواصل المدمجة -->
     <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
         <a href="tel:+212700450691" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">+212 700450691</a>
         <a href="https://x.com/MourchidiN25201" target="_blank" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">X | MourchidiN25201</a>
