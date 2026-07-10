@@ -2,66 +2,63 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <style>
-        body { margin: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: sans-serif; }
-        
-        .certificate {
-            width: 700px;
-            background: #fff;
-            border: 5px double #d4af37;
-            padding: 40px;
-            color: #333;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .header { text-align: center; margin-bottom: 30px; }
-        .logo { font-size: 28px; font-weight: bold; color: #d4af37; }
-        .subtitle { font-size: 12px; color: #777; }
-
-        .content { margin-right: 20px; }
-        .line { border-bottom: 1px solid #d4af37; width: 300px; display: inline-block; margin-bottom: 10px; }
-        
-        /* الخط الأفقي الذي يجمع الختم والـ QR */
-        .footer-line { 
-            display: flex; 
-            align-items: center; 
-            margin-top: 40px; 
-            border-top: 1px solid #d4af37; 
-            padding-top: 20px;
-            width: 100%;
-        }
-        .seal { 
-            width: 70px; height: 70px; border: 1px solid #d4af37; border-radius: 50%; 
-            display: flex; align-items: center; justify-content: center; 
-            font-size: 7px; text-align: center; color: #d4af37; margin-left: 20px;
-        }
-        #qrcode { margin-right: auto; }
-    </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body { margin: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Arial', sans-serif; }
+        
+        /* الشهادة */
+        .certificate {
+            width: 850px;
+            height: 600px;
+            background: #fff;
+            /* الإطار المزدوج والمزخرف ليقترب من شكل الصورة */
+            border: 20px double #b8860b; 
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 0 40px rgba(0,0,0,0.3);
+            text-align: center;
+        }
+
+        .logo-header { font-size: 45px; font-weight: bold; color: #b8860b; margin-top: 20px; }
+        .sub-header { font-size: 14px; color: #555; margin-bottom: 30px; }
+        
+        .content { text-align: right; font-size: 18px; line-height: 2.2; margin-top: 30px; color: #333; }
+        .placeholder { border-bottom: 1px dashed #b8860b; width: 300px; display: inline-block; }
+
+        /* توزيع الـ QR والختم في الأسفل */
+        .footer-elements { position: absolute; bottom: 40px; left: 40px; right: 40px; display: flex; justify-content: space-between; align-items: flex-end; }
+        .qr-section { text-align: center; }
+        .seal { width: 100px; height: 100px; border: 2px solid #b8860b; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 10px; color: #b8860b; }
+        
+        .signature { margin-top: 40px; border-top: 1px solid #333; width: 200px; display: inline-block; font-size: 14px; }
+    </style>
 </head>
 <body>
 
 <div class="certificate">
-    <div class="header">
-        <div class="logo">N1MOON</div>
-        <div class="subtitle">NOUH AL-MARSHUDI - VISUAL ART</div>
-    </div>
+    <div class="logo-header">N1MOON</div>
+    <div class="sub-header">NOUH AL-MARSHUDI - VISUAL ART</div>
 
     <div class="content">
-        <p>شهادة توثيق وأصالة</p>
-        <p>المقتني: <span class="line"></span></p>
-        <p>التاريخ: <span class="line"></span></p>
-        <p>كلمة الفنان:</p>
+        <strong>شهادة توثيق وأصالة | CERTIFICATE OF AUTHENTICITY</strong><br>
+        أنا الفنان: نوح المرشدي (N1MOON)، أشهد بأن هذا العمل أصلي لـ: <span class="placeholder"></span><br>
+        التاريخ: <span class="placeholder"></span><br>
+        كلمة الفنان: <span class="placeholder" style="width: 500px;"></span>
     </div>
 
-    <div class="footer-line">
-        <div class="seal">N1MOON<br>CERTIFIED<br>ORIGINAL</div>
-        <div id="qrcode"></div>
+    <div class="footer-elements">
+        <div class="qr-section">
+            <div id="qrcode"></div>
+            <div style="font-size: 10px;">الموقع الرسمي</div>
+        </div>
+        <div class="seal">ختم رسمي<br>N1MOON<br>CERTIFIED<br>ORIGINAL</div>
     </div>
+
+    <div class="signature">توقيع الفنان</div>
 </div>
 
 <script>
-    new QRCode(document.getElementById("qrcode"), { text: "https://n1moon.com", width: 50, height: 50 });
+    new QRCode(document.getElementById("qrcode"), { text: "https://n1moon.com", width: 60, height: 60 });
 </script>
 
 </body>
