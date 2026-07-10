@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        body { margin: 0; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Arial', sans-serif; }
+        body { margin: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: sans-serif; }
         
         .certificate {
-            width: 900px;
-            height: 600px;
+            width: 700px;
             background: #fff;
-            border: 20px double #d4af37;
-            padding: 50px;
+            border: 5px double #d4af37;
+            padding: 40px;
             color: #333;
-            position: relative;
-            box-shadow: 0 0 30px rgba(0,0,0,0.2);
-            box-sizing: border-box;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
 
-        /* الشعار والاسم */
-        .header { text-align: center; margin-bottom: 40px; }
-        .logo-name { font-size: 40px; font-weight: bold; color: #d4af37; margin: 0; }
-        .subtitle { font-size: 16px; color: #888; margin-top: 5px; }
+        .header { text-align: center; margin-bottom: 30px; }
+        .logo { font-size: 28px; font-weight: bold; color: #d4af37; }
+        .subtitle { font-size: 12px; color: #777; }
 
-        /* المحتوى والمساحات الواسعة */
-        .content { font-size: 20px; line-height: 2.5; }
-        .blank { border-bottom: 2px solid #d4af37; display: inline-block; width: 60%; margin-bottom: 10px; }
-        .long-blank { border-bottom: 2px solid #d4af37; display: block; width: 100%; height: 80px; }
-
-        /* الختم والـ QR */
-        .footer-elements { position: absolute; bottom: 50px; width: calc(100% - 100px); display: flex; justify-content: space-between; align-items: flex-end; }
-        .seal { width: 120px; height: 120px; border: 3px solid #d4af37; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 12px; color: #d4af37; font-weight: bold; }
-        #qrcode { background: #fff; padding: 5px; border: 1px solid #ccc; }
+        .content { margin-right: 20px; }
+        .line { border-bottom: 1px solid #d4af37; width: 300px; display: inline-block; margin-bottom: 10px; }
+        
+        /* الخط الأفقي الذي يجمع الختم والـ QR */
+        .footer-line { 
+            display: flex; 
+            align-items: center; 
+            margin-top: 40px; 
+            border-top: 1px solid #d4af37; 
+            padding-top: 20px;
+            width: 100%;
+        }
+        .seal { 
+            width: 70px; height: 70px; border: 1px solid #d4af37; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            font-size: 7px; text-align: center; color: #d4af37; margin-left: 20px;
+        }
+        #qrcode { margin-right: auto; }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
@@ -38,26 +43,25 @@
 
 <div class="certificate">
     <div class="header">
-        <div class="logo-name">N1MOON</div>
+        <div class="logo">N1MOON</div>
         <div class="subtitle">NOUH AL-MARSHUDI - VISUAL ART</div>
     </div>
 
     <div class="content">
-        <strong>شهادة توثيق وأصالة</strong><br>
-        المقتني: <span class="blank"></span><br>
-        التاريخ: <span class="blank"></span><br>
-        كلمة الفنان:<br>
-        <span class="long-blank"></span>
+        <p>شهادة توثيق وأصالة</p>
+        <p>المقتني: <span class="line"></span></p>
+        <p>التاريخ: <span class="line"></span></p>
+        <p>كلمة الفنان:</p>
     </div>
 
-    <div class="footer-elements">
-        <div id="qrcode"></div>
+    <div class="footer-line">
         <div class="seal">N1MOON<br>CERTIFIED<br>ORIGINAL</div>
+        <div id="qrcode"></div>
     </div>
 </div>
 
 <script>
-    new QRCode(document.getElementById("qrcode"), { text: "https://n1moon.com", width: 90, height: 90 });
+    new QRCode(document.getElementById("qrcode"), { text: "https://n1moon.com", width: 50, height: 50 });
 </script>
 
 </body>
