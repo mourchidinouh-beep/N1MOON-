@@ -3,65 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <style>
-        body {
-            background-color: #000000;
-            color: #ffffff;
-            font-family: 'Times New Roman', serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
+        body { margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #000; }
+        
+        .cert-wrapper {
+            /* هنا نضع الصورة التي أعجبتك كخلفية */
+            background-image: url('certificate-bg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 1000px; 
+            height: 560px;
+            position: relative;
         }
-        .certificate-container {
-            border: 5px solid #d4af37;
-            background-color: #0a0a0a;
-            padding: 50px;
-            width: 800px;
-            text-align: center;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+
+        .input-text {
+            position: absolute;
+            font-family: 'Arial', sans-serif;
+            color: #d4af37;
+            font-weight: bold;
+            font-size: 18px;
         }
-        .logo-img {
-            max-width: 180px;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 28px;
-            color: #ffffff;
-            border-bottom: 2px solid #d4af37;
-            padding-bottom: 10px;
-            display: inline-block;
-        }
-        .details {
-            margin: 40px 0;
-            font-size: 20px;
-            line-height: 2.2;
-            text-align: center;
-        }
-        .serial { color: #d4af37; font-weight: bold; }
-        .footer { margin-top: 50px; display: flex; justify-content: space-around; color: #d4af37; font-size: 18px; }
+
+        /* أماكن النصوص فوق الصورة (يمكنك تعديل الأرقام لضبط الموقع) */
+        .title-pos { top: 385px; right: 280px; }
+        .dim-pos { top: 415px; right: 280px; }
+        .serial-pos { top: 445px; right: 280px; }
     </style>
 </head>
 <body>
 
-    <div class="certificate-container">
-        <!-- تأكد أن اسم ملف الشعار مطابق تماماً لما هو موجود في GitHub -->
-        <img src="Logon1moon.png" class="logo-img" alt="N1MOON">
-        
-        <h1>شهادة أصالة عمل فني / Certificate of Authenticity</h1>
-        
-        <div class="details">
-            يقر الفنان <strong>نوح المرشدي (NOUH EL MORCHIDI)</strong> بأن هذا العمل فني أصلي.<br>
-            <em>The artist <strong>NOUH EL MORCHIDI</strong> certifies that this artwork is an original piece.</em>
-            <br>
-            <p>اسم اللوحة / Artwork Title: .......................................</p>
-            <p>الرقم التسلسلي / Serial Number: <span class="serial">N1M-2026-0001</span></p>
-        </div>
-        
-        <div class="footer">
-            <div>التاريخ: ___/___/2026</div>
-            <div>توقيع الفنان: ____________</div>
-        </div>
+    <div class="cert-wrapper">
+        <div class="input-text title-pos">اسم اللوحة: .......................................</div>
+        <div class="input-text dim-pos">الخامات: .......................................</div>
+        <div class="input-text serial-pos">N1M-2026-0001</div>
     </div>
 
 </body>
