@@ -1,49 +1,74 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
-        body { background: #dcdcdc; display: flex; justify-content: center; padding: 50px; }
+        body { margin: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Arial', sans-serif; }
+        .certificate { width: 850px; background: #fff; border: 5px double #c5a059; padding: 40px; box-sizing: border-box; position: relative; }
         
-        .certificate-container {
-            width: 800px;
-            background: #fff;
-            padding: 40px;
-            /* هذا هو سر الإطار الذهبي المزدوج الفاخر */
-            border: 20px double #b8860b;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
-            font-family: 'Amiri', serif;
-        }
-
-        .header { text-align: center; margin-bottom: 30px; }
-        .logo { font-size: 40px; font-weight: bold; color: #8b6508; }
+        .header { text-align: center; margin-bottom: 20px; }
+        .logo { font-size: 35px; font-weight: bold; color: #c5a059; }
+        .subtitle { font-size: 14px; color: #777; }
         
-        .content { font-size: 18px; line-height: 2; color: #000; }
-        .field { border-bottom: 1px solid #b8860b; display: inline-block; width: 300px; }
+        .content { font-size: 16px; line-height: 1.6; text-align: right; }
+        .text-block { margin-bottom: 15px; }
+        .en-text { font-size: 12px; color: #555; display: block; margin-top: -5px; }
         
-        .footer { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 50px; }
-        .seal { width: 80px; height: 80px; border: 2px solid #b8860b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #b8860b; }
+        .footer-line { border-top: 1px solid #c5a059; margin-top: 30px; padding-top: 20px; display: flex; align-items: center; justify-content: space-between; }
+        .seal { width: 70px; height: 70px; border: 1px solid #c5a059; border-radius: 50%; font-size: 7px; text-align: center; color: #c5a059; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .qr-box { text-align: center; font-size: 10px; }
     </style>
 </head>
 <body>
-    <div class="certificate-container">
-        <div class="header">
-            <div class="logo">N1MOON</div>
-            <div style="font-size: 14px; color: #666;">NOUH EL-MORCHIDI - VISUAL ART</div>
+
+<div class="certificate">
+    <div class="header">
+        <div class="logo">N1MOON</div>
+        <div class="subtitle">NOUH EL-MORCHIDI - VISUAL ART</div>
+    </div>
+
+    <div class="content">
+        <div class="text-block">
+            شهادة توثيق وأصالة<br>
+            <span class="en-text">CERTIFICATE OF AUTHENTICITY</span>
         </div>
-        <div class="content">
-            <p><strong>شهادة توثيق وأصالة | CERTIFICATE OF AUTHENTICITY</strong></p>
-            <p>أنا الموقع أدناه، الفنان: نوح المرشدي (N1MOON)</p>
-            <p>أشهد بأن العمل الفني هو عمل أصلي ومملوك قانونياً لـ: <span class="field"></span></p>
-            <p>وقد تم بيعه وتاريخ تسليمه في: <span class="field"></span></p>
-            <p>كلمة الفنان: <span class="field" style="width: 500px;"></span></p>
+        
+        <div class="text-block">
+            أنا الموقع أدناه، الفنان: نوح المرشدي (N1MOON)<br>
+            <span class="en-text">I, the undersigned, the artist: NOUH AL-MORCHIDI (N1MOON)</span>
         </div>
-        <div class="footer">
-            <div id="qrcode"></div>
-            <div class="seal">N1MOON<br>CERTIFIED<br>ORIGINAL</div>
+        
+        <div class="text-block">
+            أشهد بأن العمل الفني هو عمل أصلي ومملوك قانونياً لـ: [ اسم المقتني ]<br>
+            <span class="en-text">I certify that the artwork is an original and legally owned by: [ COLLECTOR'S NAME ]</span>
+        </div>
+        
+        <div class="text-block">
+            وقد تم بيعه وتاريخ تسليمه في: [ التاريخ ]<br>
+            <span class="en-text">It was sold and delivered on: [ DATE ]</span>
+        </div>
+        
+        <div class="text-block">
+            كلمة الفنان للمقتني: [ رسالة شخصية ]<br>
+            <span class="en-text">Artist's note to the collector: [ PERSONAL MESSAGE ]</span>
+        </div>
+        
+        <div style="text-align: center; margin-top: 20px;">
+            توقيع الفنان<br>
+            <span class="en-text">ARTIST'S SIGNATURE</span>
         </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <script>new QRCode(document.getElementById("qrcode"), {text: "https://n1moon.com", width: 60, height: 60});</script>
+
+    <div class="footer-line">
+        <div class="seal">ختم رسمي<br>N1MOON<br>CERTIFIED<br>ORIGINAL</div>
+        <div class="qr-box"><div id="qrcode"></div>الموقع الرسمي<br>OFFICIAL WEBSITE</div>
+    </div>
+</div>
+
+<script>
+    new QRCode(document.getElementById("qrcode"), { text: "https://n1moon.com", width: 50, height: 50 });
+</script>
+
 </body>
 </html>
