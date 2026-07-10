@@ -2,59 +2,55 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
-        body { margin: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Arial', sans-serif; }
+        body { margin: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Times New Roman', serif; }
+        .certificate { width: 850px; height: 600px; background: #fff; border: 25px double #c5a059; padding: 40px; position: relative; box-sizing: border-box; }
         
-        /* الشهادة */
-        .certificate {
-            width: 850px;
-            height: 600px;
-            background: #fff;
-            /* الإطار المزدوج والمزخرف ليقترب من شكل الصورة */
-            border: 20px double #b8860b; 
-            padding: 40px;
-            position: relative;
-            box-shadow: 0 0 40px rgba(0,0,0,0.3);
-            text-align: center;
-        }
-
-        .logo-header { font-size: 45px; font-weight: bold; color: #b8860b; margin-top: 20px; }
-        .sub-header { font-size: 14px; color: #555; margin-bottom: 30px; }
+        .header { text-align: center; margin-bottom: 20px; }
+        .logo { font-size: 40px; font-weight: bold; color: #c5a059; }
+        .subtitle { font-size: 14px; color: #555; }
         
-        .content { text-align: right; font-size: 18px; line-height: 2.2; margin-top: 30px; color: #333; }
-        .placeholder { border-bottom: 1px dashed #b8860b; width: 300px; display: inline-block; }
-
-        /* توزيع الـ QR والختم في الأسفل */
-        .footer-elements { position: absolute; bottom: 40px; left: 40px; right: 40px; display: flex; justify-content: space-between; align-items: flex-end; }
-        .qr-section { text-align: center; }
-        .seal { width: 100px; height: 100px; border: 2px solid #b8860b; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 10px; color: #b8860b; }
+        .text-content { font-size: 17px; line-height: 2.0; text-align: right; margin-top: 20px; }
+        .dashed-line { border-bottom: 1px dashed #c5a059; display: inline-block; width: 350px; vertical-align: bottom; }
         
-        .signature { margin-top: 40px; border-top: 1px solid #333; width: 200px; display: inline-block; font-size: 14px; }
+        .footer-elements { position: absolute; bottom: 40px; width: calc(100% - 80px); display: flex; justify-content: space-between; align-items: flex-end; }
+        .qr-side { text-align: center; }
+        .qr-label { font-size: 12px; margin-top: 5px; }
+        .seal-side { width: 90px; height: 90px; border: 1px solid #c5a059; border-radius: 50%; display: flex; justify-content: center; align-items: center; text-align: center; font-size: 8px; color: #c5a059; }
+        
+        .sign-area { position: absolute; bottom: 60px; right: 280px; width: 200px; border-top: 1px solid #333; text-align: center; font-size: 14px; }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
 
 <div class="certificate">
-    <div class="logo-header">N1MOON</div>
-    <div class="sub-header">NOUH EL-MORCHIDI - VISUAL ART</div>
+    <div class="header">
+        <div class="logo">N1MOON</div>
+        <div class="subtitle">NOUH EL-MORCHIDI - VISUAL ART</div>
+    </div>
 
-    <div class="content">
+    <div class="text-content">
         <strong>شهادة توثيق وأصالة | CERTIFICATE OF AUTHENTICITY</strong><br>
-        أنا الفنان: نوح المرشدي (N1MOON)، أشهد بأن هذا العمل أصلي لـ: <span class="placeholder"></span><br>
-        التاريخ: <span class="placeholder"></span><br>
-        كلمة الفنان: <span class="placeholder" style="width: 500px;"></span>
+        أنا الموقع أدناه، الفنان:<br>
+        <strong>نوح المرشدي (N1MOON)</strong><br>
+        أشهد بأن العمل الفني الموضح أدناه هو عمل أصلي ومملوك قانونياً لـ:<br>
+        [ COLLECTOR'S NAME | مكان مخصص لكتابة اسم المقتني ]<br>
+        وقد تم بيعه وتاريخ تسليمه في:<br>
+        [ DATE | DATE | مكان مخصص لكتابة التاريخ ]<br>
+        كلمة خاصة من الفنان للمقتني:<br>
+        [ PERSONAL MESSAGE | * مكان مخصص لرسالة شخصية من الفنان ]
     </div>
 
     <div class="footer-elements">
-        <div class="qr-section">
+        <div class="qr-side">
             <div id="qrcode"></div>
-            <div style="font-size: 10px;">الموقع الرسمي</div>
+            <div class="qr-label">الموقع الرسمي<br>OFFICIAL WEBSITE</div>
         </div>
-        <div class="seal">ختم رسمي<br>N1MOON<br>CERTIFIED<br>ORIGINAL</div>
+        <div class="seal-side">ختم رسمي<br>دائري<br>N1MOON<br>CERTIFIED<br>ORIGINAL</div>
     </div>
-
-    <div class="signature">توقيع الفنان</div>
+    
+    <div class="sign-area">توقيع الفنان | ARTIST'S SIGNATURE</div>
 </div>
 
 <script>
