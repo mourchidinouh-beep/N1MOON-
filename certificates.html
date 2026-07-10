@@ -17,7 +17,6 @@
             background-color: #000; 
         }
         .cert-wrapper {
-            /* هذا الكود يعرض صورتك image.jpg كخلفية */
             background-image: url('image.jpg');
             background-size: contain;
             background-repeat: no-repeat;
@@ -34,7 +33,7 @@
             font-size: 18px;
             text-align: right;
         }
-        /* أماكن النصوص فوق الصورة */
+        /* أماكن النصوص */
         .title-pos { top: 385px; right: 280px; }
         .dim-pos { top: 415px; right: 280px; }
         .serial-pos { top: 445px; right: 280px; }
@@ -48,18 +47,18 @@
             padding: 10px 20px;
             background: rgba(0,0,0,0.5);
         }
-        /* تم تعديل القيم هنا قليلاً ليصبح الرمز في مكان أفضل */
-        #qrcode { position: absolute; bottom: 50px; left: 50px; width: 100px; height: 100px; }
+        
+        /* هذا هو التعديل: وضعنا الرمز ليظهر فوق الإطار في جهة اليسار */
+        #qrcode { 
+            position: absolute; 
+            bottom: 450px; /* رفعت الرمز ليكون فوق الإطار */
+            left: 30px;    /* محاذى للجهة اليسرى */
+            width: 80px;   /* حجم مناسب للرمز فوق الإطار */
+            height: 80px; 
+        }
     </style>
 </head>
 <body>
-
-    <div class="cert-wrapper">
-        <div class="input-text title-pos">ا
-        
-        <div class="input-text dim-pos">ا
-        <div class="input-text serial-pos">ا
-        
         <!-- مكان الـ QR Code -->
         <div id="qrcode"></div>
     </div>
@@ -70,8 +69,8 @@
         // إنشاء الـ QR Code للرابط الخاص بك
         new QRCode(document.getElementById("qrcode"), {
             text: "https://n1moon.com/certificates.html",
-            width: 100,
-            height: 100,
+            width: 80,
+            height: 80,
             colorDark : "#d4af37",
             colorLight : "#000000",
         });
