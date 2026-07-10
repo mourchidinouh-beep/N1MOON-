@@ -1,50 +1,49 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
-        body { margin: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: sans-serif; }
-        .certificate { width: 800px; background: #fff; border: 5px double #c5a059; padding: 40px; }
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+        body { background: #dcdcdc; display: flex; justify-content: center; padding: 50px; }
         
-        .header { text-align: center; margin-bottom: 20px; }
-        .logo { font-size: 30px; font-weight: bold; color: #c5a059; }
-        .subtitle { font-size: 12px; color: #777; }
+        .certificate-container {
+            width: 800px;
+            background: #fff;
+            padding: 40px;
+            /* هذا هو سر الإطار الذهبي المزدوج الفاخر */
+            border: 20px double #b8860b;
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            font-family: 'Amiri', serif;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        .logo { font-size: 40px; font-weight: bold; color: #8b6508; }
         
-        .content { font-size: 14px; line-height: 1.8; text-align: right; }
+        .content { font-size: 18px; line-height: 2; color: #000; }
+        .field { border-bottom: 1px solid #b8860b; display: inline-block; width: 300px; }
         
-        /* الخط الأفقي الذي يربط الختم بالـ QR */
-        .footer-line { border-top: 1px solid #c5a059; margin-top: 30px; padding-top: 20px; display: flex; align-items: center; justify-content: space-between; }
-        .seal { width: 60px; height: 60px; border: 1px solid #c5a059; border-radius: 50%; font-size: 6px; text-align: center; color: #c5a059; display: flex; align-items: center; justify-content: center; }
-        .qr-box { text-align: center; font-size: 10px; }
+        .footer { display: flex; justify-content: space-between; align-items: flex-end; margin-top: 50px; }
+        .seal { width: 80px; height: 80px; border: 2px solid #b8860b; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #b8860b; }
     </style>
 </head>
 <body>
-
-<div class="certificate">
-    <div class="header">
-        <div class="logo">N1MOON</div>
-        <div class="subtitle">NOUH EL-MORCHIDI - VISUAL ART</div>
+    <div class="certificate-container">
+        <div class="header">
+            <div class="logo">N1MOON</div>
+            <div style="font-size: 14px; color: #666;">NOUH EL-MORCHIDI - VISUAL ART</div>
+        </div>
+        <div class="content">
+            <p><strong>شهادة توثيق وأصالة | CERTIFICATE OF AUTHENTICITY</strong></p>
+            <p>أنا الموقع أدناه، الفنان: نوح المرشدي (N1MOON)</p>
+            <p>أشهد بأن العمل الفني هو عمل أصلي ومملوك قانونياً لـ: <span class="field"></span></p>
+            <p>وقد تم بيعه وتاريخ تسليمه في: <span class="field"></span></p>
+            <p>كلمة الفنان: <span class="field" style="width: 500px;"></span></p>
+        </div>
+        <div class="footer">
+            <div id="qrcode"></div>
+            <div class="seal">N1MOON<br>CERTIFIED<br>ORIGINAL</div>
+        </div>
     </div>
-
-    <div class="content">
-        <p>شهادة توثيق وأصالة | CERTIFICATE OF AUTHENTICITY</p>
-        <p>أنا الموقع أدناه، الفنان: <strong>نوح المرشدي (N1MOON)</strong></p>
-        <p>أشهد بأن العمل الفني هو عمل أصلي ومملوك قانونياً لـ: [ COLLECTOR'S NAME ]</p>
-        <p>وقد تم بيعه وتاريخ تسليمه في: [ DATE ]</p>
-        <p>كلمة الفنان للمقتني: [ PERSONAL MESSAGE ]</p>
-        <div style="text-align: center; margin-top: 20px;">توقيع الفنان | ARTIST'S SIGNATURE</div>
-    </div>
-
-    <div class="footer-line">
-        <div class="seal">N1MOON<br>CERTIFIED<br>ORIGINAL</div>
-        <div class="qr-box"><div id="qrcode"></div>الموقع الرسمي</div>
-    </div>
-</div>
-
-<script>
-    new QRCode(document.getElementById("qrcode"), { text: "https://n1moon.com", width: 50, height: 50 });
-</script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script>new QRCode(document.getElementById("qrcode"), {text: "https://n1moon.com", width: 60, height: 60});</script>
 </body>
 </html>
