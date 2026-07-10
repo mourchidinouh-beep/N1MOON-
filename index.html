@@ -42,9 +42,23 @@
     <!-- نوافذ العرض (Modals) -->
     <div id="jacket-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
-        <div class="modal-content">
-            <img src="jacket.n1moon1.png" onclick="openFullImage(this.src, 'ياقة هندسية.', 'High Collar.')">
-            <img src="1782879948443.png" onclick="openFullImage(this.src, 'تفاصيل الجاكيت.', 'Jacket Details.')">
+        <div class="soul-container">
+            <h2 style="margin-bottom: 30px;">JACKIE PUFFER</h2>
+            <div class="modal-content" style="margin-top: 0; margin-bottom: 30px;">
+                <img src="jacket.n1moon1.png" onclick="openFullImage(this.src, 'ياقة هندسية.', 'High Collar.')">
+                <img src="1782879948443.png" onclick="openFullImage(this.src, 'تفاصيل الجاكيت.', 'Jacket Details.')">
+            </div>
+            
+            <div style="text-align: center; padding: 20px; background: #111; border-radius: 10px; border: 1px solid #444; color: #ccc;">
+                <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>فلسفة التصميم:</strong> جاكيت "جاكي" يمثل دمجاً بين الدفء والحداثة، مصمم بياقة هندسية توفر حماية وعزلاً مع الحفاظ على طابع مستقبلي خاص بـ N1MOON.
+                </p>
+                <p style="font-size: 1.1em; line-height: 1.6; font-style: italic; color: #aaa; border-top: 1px solid #333; padding-top: 10px;">
+                    <strong>Design Philosophy:</strong> The "Jackie" puffer jacket represents a fusion of warmth and modernity, designed with a geometric collar that provides protection and insulation while maintaining a futuristic N1MOON aesthetic.
+                </p>
+            </div>
+            
+            <div class="close-overlay" style="margin-top: 30px;" onclick="document.getElementById('jacket-modal').style.display='none'">CLOSE | إغلاق</div>
         </div>
     </div>
 
