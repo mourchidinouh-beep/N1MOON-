@@ -7,74 +7,32 @@
     <!-- مكتبة توليد QR Code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
-        body { 
-            margin: 0; 
-            padding: 0; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-            background-color: #000; 
+        body { margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #000; }
+        .cert-wrapper { 
+            background-image: url('image.jpg'); 
+            background-size: contain; background-repeat: no-repeat; background-position: center;
+            width: 1000px; height: 560px; position: relative; 
         }
-        .cert-wrapper {
-            background-image: url('image.jpg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 1000px; 
-            height: 560px;
-            position: relative;
-        }
-        .input-text {
-            position: absolute;
-            font-family: 'Arial', sans-serif;
-            color: #d4af37;
-            font-weight: bold;
-            font-size: 18px;
-            text-align: right;
-        }
-        /* أماكن النصوص */
-        .title-pos { top: 385px; right: 280px; }
-        .dim-pos { top: 415px; right: 280px; }
-        .serial-pos { top: 445px; right: 280px; }
-        
-        .back-link {
-            position: fixed;
-            bottom: 20px;
-            color: #ffffff;
-            text-decoration: none;
-            border: 1px solid #ffffff;
-            padding: 10px 20px;
-            background: rgba(0,0,0,0.5);
-        }
-        
-        /* هذا هو التعديل: وضعنا الرمز ليظهر فوق الإطار في جهة اليسار */
-        #qrcode { 
-            position: absolute; 
-            bottom: 450px; /* رفعت الرمز ليكون فوق الإطار */
-            left: 30px;    /* محاذى للجهة اليسرى */
-            width: 80px;   /* حجم مناسب للرمز فوق الإطار */
-            height: 80px; 
-        }
+        /* مكان الـ QR Code في اليسار */
+        #qrcode { position: absolute; bottom: 30px; left: 30px; width: 100px; height: 100px; }
     </style>
 </head>
 <body>
-        <!-- مكان الـ QR Code -->
-        <div id="qrcode"></div>
-    </div>
 
-    <a href="index.html" class="back-link">العودة للرئيسية</a>
+<div class="cert-wrapper">
+    <!-- مكان الـ QR Code -->
+    <div id="qrcode"></div>
+</div>
 
-    <script>
-        // إنشاء الـ QR Code للرابط الخاص بك
-        new QRCode(document.getElementById("qrcode"), {
-            text: "https://n1moon.com/certificates.html",
-            width: 80,
-            height: 80,
-            colorDark : "#d4af37",
-            colorLight : "#000000",
-        });
-    </script>
+<script>
+    new QRCode(document.getElementById("qrcode"), {
+        text: "https://n1moon.com/certificates.html",
+        width: 100,
+        height: 100,
+        colorDark : "#d4af37",
+        colorLight : "#000000",
+    });
+</script>
 
 </body>
 </html>
