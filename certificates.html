@@ -2,12 +2,21 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N1MOON | Certificate</title>
     <style>
-        body { margin: 0; padding: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background-color: #000; }
-        
+        body { 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            background-color: #000; 
+        }
         .cert-wrapper {
-            /* هنا نضع الصورة التي أعجبتك كخلفية */
-            background-image: url('certificate-bg.png');
+            /* هذا الكود يعرض صورتك image.jpg كخلفية */
+            background-image: url('image.jpg');
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -15,19 +24,28 @@
             height: 560px;
             position: relative;
         }
-
         .input-text {
             position: absolute;
             font-family: 'Arial', sans-serif;
             color: #d4af37;
             font-weight: bold;
             font-size: 18px;
+            text-align: right;
         }
-
-        /* أماكن النصوص فوق الصورة (يمكنك تعديل الأرقام لضبط الموقع) */
+        /* أماكن النصوص فوق الصورة */
         .title-pos { top: 385px; right: 280px; }
         .dim-pos { top: 415px; right: 280px; }
         .serial-pos { top: 445px; right: 280px; }
+        
+        .back-link {
+            position: fixed;
+            bottom: 20px;
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid #ffffff;
+            padding: 10px 20px;
+            background: rgba(0,0,0,0.5);
+        }
     </style>
 </head>
 <body>
@@ -37,6 +55,8 @@
         <div class="input-text dim-pos">الخامات: .......................................</div>
         <div class="input-text serial-pos">N1M-2026-0001</div>
     </div>
+
+    <a href="index.html" class="back-link">العودة للرئيسية</a>
 
 </body>
 </html>
