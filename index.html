@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>N1MOON</title>
+    <!-- Favicon - الشعار في شريط المتصفح -->
     <link rel="icon" type="image/png" href="Logon1moon.png">
     
     <style>
@@ -41,7 +42,23 @@
     <div class="btn" onclick="document.getElementById('soul-modal').style.display='block'" style="border-color: #ffd700; color: #ffd700;">MY SPIRITUAL THREAD | مسار الروح</div>
     <div class="btn sea-warning-btn" onclick="document.getElementById('sea-modal').style.display='block'">⚠️ صرخة البحر | THE SEA'S CRY</div>
 
-    <!-- نافذة العرض الأصلية لـ Jackie Puffer (المعدلة كما طلبت) -->
+    <!-- نوافذ العرض (Modals) -->
+    <div id="jacket-modal" class="modal">
+        <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
+        <div class="soul-container">
+            <h2 style="margin-bottom: 30px;">JACKIE PUFFER</h2>
+            <div class="modal-content" style="margin-top: 0; margin-bottom: 30px;">
+                <img src="jacket.n1moon1.png" onclick="openFullImage(this.src, 'ياقة هندسية.', 'High Collar.')">
+                <img src="1782879948443.png" onclick="openFullImage(this.src, 'تفاصيل الجاكيت.', 'Jacket Details.')">
+            </div>
+            
+            <div style="text-align: center; padding: 20px; background: #111; border-radius: 10px; border: 1px solid #444; color: #ccc;">
+                <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 15px;">
+                    <strong>فلسفة التصميم:</strong> جاكيت "جاكي" يمثل دمجاً بين الدفء والحداثة، مصمم بياقة هندسية توفر حماية وعزلاً مع الحفاظ على طابع مستقبلي خاص بـ N1MOON.
+                </p>
+                <p style="font-size: 1.1em; line-height: 1.6; font-style: italic; color: #aaa; border-top: 1px solid #333; padding-top: 10px;">
+                    <strong>Design Philosophy:</strong> The "Jackie" puffer jacket represents a fusion of warmth and modernity, designed with a geometric collar that provides protection and insulation while maintaining a futuristic N1MOON aesthetic.
+                </p>     <!-- نافذة العرض الأصلية لـ Jackie Puffer (معدلة) -->
     <div id="jacket-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="soul-container">
@@ -73,12 +90,15 @@
                 </p>
             </div>
             
-            <a href="https://n1moon-shop.fourthwall.com/" class="btn" style="margin-top: 20px;">SHOP NOW | اشتري الآن</a>
+modal').style.display='none'">CLOSE | إغلاق</div>
+        </div>
+            </div>
+            </div>
+            
             <div class="close-overlay" style="margin-top: 30px;" onclick="document.getElementById('jacket-modal').style.display='none'">CLOSE | إغلاق</div>
         </div>
     </div>
 
-    <!-- نافذة الفلك القمري -->
     <div id="moon-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="modal-content">
@@ -89,7 +109,6 @@
         </div>
     </div>
 
-    <!-- نافذة مسار الروح -->
     <div id="soul-modal" class="modal">
         <span class="close-btn" onclick="this.parentElement.style.display='none'">&times;</span>
         <div class="soul-container">
@@ -118,7 +137,6 @@
         </div>
     </div>
 
-    <!-- نافذة صرخة البحر -->
     <div id="sea-modal" class="modal">
         <span class="close-btn" style="color:#00d4ff;" onclick="document.getElementById('sea-modal').style.display='none'">&times;</span>
         <div class="soul-container">
@@ -139,7 +157,6 @@
         </div>
     </div>
 
-    <!-- نافذة عرض الصور -->
     <div id="full-view-modal">
         <img id="full-img" src="">
         <div id="image-story" class="story-text"></div>
@@ -160,6 +177,6 @@
         <a href="mailto:mourchidinouh@gmail.com" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">mourchidinouh@gmail.com</a>
     </div>
 
-    <div style="color: #444; font-size: 0.7em; margin-top: 20px; padding-bottom: 20px;">© 2026 N1MOON. All rights reserved.moroc 🇲🇦 مغرب</div>
+    <div style="color: #444; font-size: 0.7em; margin-top: 20px; padding-bottom: 20px;">© 2026 N1MOON. All rights reserved.</div>
 </body>
 </html>
