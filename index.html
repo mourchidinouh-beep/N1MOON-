@@ -41,9 +41,22 @@
         .close-overlay { margin: 30px auto; cursor: pointer; border: 1px solid #fff; padding: 10px 30px; border-radius: 30px; width: fit-content; transition: 0.3s; }
         .close-overlay:hover { background: #fff; color: #000; }
         
-        /* تنسيق إضافي لرحلة نوح */
         .story-box { background: #151515; padding: 30px; border: 1px solid #333; margin-bottom: 30px; text-align: justify; line-height: 1.8; border-radius: 10px; color: #ccc; }
-        .gallery-new { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1000px; margin: 20px auto; }
+        
+        /* تصميم معرض رحلة الحياة المحدث */
+        .gallery-new { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; 
+            max-width: 1000px; 
+            margin: 30px auto; 
+        }
+        .gallery-new img { 
+            width: 100%; 
+            border-radius: 8px; 
+            border: 1px solid #444;
+            transition: transform 0.3s;
+        }
     </style>
 </head>
 <body>
@@ -57,10 +70,8 @@
     <div class="btn" onclick="document.getElementById('moon-modal').style.display='block'">LUNAR ASTRONOMY | معرض الفلك القمري</div>
     <div class="btn" onclick="document.getElementById('soul-modal').style.display='block'" style="border-color: #ffd700; color: #ffd700;">MY SPIRITUAL THREAD | مسار الروح</div>
     <div class="btn sea-warning-btn" onclick="document.getElementById('sea-modal').style.display='block'">⚠️ صرخة البحر | THE SEA'S CRY</div>
-    <!-- الزر الجديد -->
     <div class="btn" onclick="document.getElementById('about-modal').style.display='block'">LIFE JOURNEY | ART NOUH</div>
 
-    <!-- النافذة الجديدة -->
     <div id="about-modal" class="modal">
         <span class="close-btn" onclick="document.getElementById('about-modal').style.display='none'">&times;</span>
         <div class="soul-container" style="max-width: 800px;">
@@ -86,7 +97,7 @@
         </div>
     </div>
 
-    <!-- النوافذ القديمة كما هي -->
+    <!-- باقي الأقسام -->
     <div id="jacket-modal" class="modal">
         <span class="close-btn" onclick="document.getElementById('jacket-modal').style.display='none'">&times;</span>
         <div class="soul-container">
