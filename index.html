@@ -70,15 +70,12 @@
 </head>
 <body>
 
-    <!-- مشغل الموسيقى (مخفي) -->
     <audio id="mainAudio" loop></audio>
 
-    <!-- رسالة الإرشاد التفاعلية -->
     <div style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.1); color: #fff; padding: 12px 25px; border-radius: 30px; border: 1px solid #fff; font-size: 0.9em; backdrop-filter: blur(5px); z-index: 9999; animation: fadeOut 8s forwards;">
         💡 اضغط على البطاقات لاستكشاف المحتوى | Tap to explore
     </div>
 
-    <!-- المرآة الجديدة -->
     <header class="nouh-header">
         <h1>NOUH EL MORCHIDI</h1>
         <p class="tagline">Art • Vision • Marine Preservation</p>
@@ -94,12 +91,10 @@
     <div class="btn" onclick="openAndPlay('moon-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3')">LUNAR ASTRONOMY | معرض الفلك القمري</div>
     <div class="btn" onclick="openAndPlay('soul-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3')" style="border-color: #ffd700; color: #ffd700;">MY SPIRITUAL THREAD | مسار الروح</div>
     
-    <!-- زر البحر مع صوت أمواج البحر الطبيعية المحدث -->
     <div class="btn sea-warning-btn" onclick="openAndPlay('sea-modal', 'https://actions.google.com/sounds/v1/water/ocean_waves.ogg')">⚠️ صرخة البحر | THE SEA'S CRY</div>
     
     <div class="btn" onclick="document.getElementById('about-modal').style.display='block'">LIFE JOURNEY | ART NOUH</div>
 
-    <!-- الدوال البرمجية للموسيقى -->
     <script>
         function openAndPlay(modalId, audioSrc) {
             var audio = document.getElementById("mainAudio");
@@ -115,7 +110,6 @@
         }
     </script>
 
-    <!-- نافذة LIFE JOURNEY -->
     <div id="about-modal" class="modal">
         <span class="close-btn" onclick="document.getElementById('about-modal').style.display='none'">&times;</span>
         <div class="soul-container" style="max-width: 800px;">
@@ -145,17 +139,38 @@
         </div>
     </div>
 
-    <!-- نافذة JACKIE PUFFER -->
+    <!-- نافذة JACKIE PUFFER المصححة -->
     <div id="jacket-modal" class="modal">
         <span class="close-btn" onclick="closeAndStop('jacket-modal')">&times;</span>
         <div class="soul-container">
             <h2 style="margin-bottom: 30px;">JACKIE PUFFER</h2>
             <div class="modal-content" style="margin-top: 0; margin-bottom: 30px; display: block;">
-                <div class="story-item"><img src="jacket.n1moon1.png" onclick="openFullImage(this.src, 'ياقة هندسية.', 'High Collar.')"></div>
-                <div class="story-item"><img src="1782879948443.png" onclick="openFullImage(this.src, '  تفاصيل الجاكيت.', 'Jacket Details.')"></div>
-                <div class="story-item"><img src="1783738709476.jpg" onclick="openFullImage(this.src, 'نظرة شمولية المونوليث على فلسفة N1MOON.', 'A comprehensive look at the N1MOON philosophy أكثر من مجرد ياقة؛ إنها درعك الرقمي في مواجهة العوامل الخارجية.', 'More than just a collar; it is your digital shield against external elements.')"></div>
-                <div class="story-item"><img src="1783737855576.png" onclick="openFullImage(this.src, 'أكثر من مجرد ياقة الملابس المونوليثي.', 'More than just a collar; it\'s your digital shield.Absolute presence; the Monolith jacket that embodies the concept of strength and tranquility.')"></div>
-                <div class="story-item"><img src="1783737850669.jpg" onclick="openFullImage(this.src, 'حضور مطلق. سترة المونوليث.', 'Absolute presence. The Monolith jacket.Absolute presence; the Monolith jacket that embodies the concept of strength and tranquility')"></div>
+                
+                <div class="story-item">
+                    <div style="color:#fff; margin-bottom:5px; font-weight:bold;">ياقة هندسية | High Collar</div>
+                    <img src="jacket.n1moon1.png" onclick="openFullImage(this.src, 'ياقة هندسية.', 'High Collar.')">
+                </div>
+                
+                <div class="story-item">
+                    <div style="color:#fff; margin-bottom:5px; font-weight:bold;">تفاصيل الجاكيت | Jacket Details</div>
+                    <img src="1782879948443.png" onclick="openFullImage(this.src, 'تفاصيل الجاكيت.', 'Jacket Details.')">
+                </div>
+                
+                <div class="story-item">
+                    <div style="color:#fff; margin-bottom:5px; font-weight:bold;">رؤية المونوليث | Monolith Vision</div>
+                    <img src="1783738709476.jpg" onclick="openFullImage(this.src, 'نظرة شمولية المونوليث على فلسفة N1MOON.', 'A comprehensive look at the N1MOON philosophy.')">
+                </div>
+                
+                <div class="story-item">
+                    <div style="color:#fff; margin-bottom:5px; font-weight:bold;">الدرع الرقمي | Digital Shield</div>
+                    <img src="1783737855576.png" onclick="openFullImage(this.src, 'أكثر من مجرد ياقة؛ إنها درعك الرقمي.', 'More than just a collar; it\'s your digital shield.')">
+                </div>
+                
+                <div class="story-item">
+                    <div style="color:#fff; margin-bottom:5px; font-weight:bold;">حضور المونوليث | Monolith Presence</div>
+                    <img src="1783737850669.jpg" onclick="openFullImage(this.src, 'حضور مطلق. سترة المونوليث.', 'Absolute presence. The Monolith jacket.')">
+                </div>
+                
             </div>
             <div style="text-align: center; padding: 20px; background: #111; border-radius: 10px; border: 1px solid #444; color: #ccc;">
                 <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 15px;"><strong>فلسفة التصميم:</strong> جاكيت "جاكي" يمثل دمجاً بين الدفء والحداثة، مصمم بياقة هندسية توفر حماية وعزلاً مع الحفاظ على طابع مستقبلي خاص بـ N1MOON.</p>
@@ -164,7 +179,6 @@
         </div>
     </div>
 
-    <!-- نافذة LUNAR ASTRONOMY -->
     <div id="moon-modal" class="modal">
         <span class="close-btn" onclick="closeAndStop('moon-modal')">&times;</span>
         <div class="modal-content">
@@ -176,7 +190,6 @@
         <div class="close-overlay" style="margin: 30px auto;" onclick="closeAndStop('moon-modal')">CLOSE | إغلاق</div>
     </div>
 
-    <!-- نافذة MY SPIRITUAL THREAD -->
     <div id="soul-modal" class="modal">
         <span class="close-btn" onclick="closeAndStop('soul-modal')">&times;</span>
         <div class="soul-container">
@@ -189,27 +202,22 @@
         </div>
     </div>
 
-    <!-- نافذة THE SEA'S CRY -->
     <div id="sea-modal" class="modal">
         <span class="close-btn" style="color:#00d4ff;" onclick="closeAndStop('sea-modal')">&times;</span>
         <div class="soul-container">
             <h2 style="color: #ff3333; margin-bottom: 30px; font-size: 2em; text-align: center;">⚠️ صرخة البحر | THE SEA'S CRY ⚠️</h2>
             <div style="border: 2px solid #ff3333; padding: 40px; border-radius: 20px; background: rgba(0, 0, 0, 0.9); text-align: center;">
-                
                 <p style="font-size: 1.5em; color: #fff; line-height: 1.8; margin-bottom: 30px; direction: rtl; text-align: justify;">
                     ⚠️ "أنا البحر، أخاطبك يا نوح لأنك الوحيد الذي استمع لندائي. لا تكتفِ بالنظر إلى أمواجي، بل انقل صرختي للعالم: كفّوا عن تدنيس مياهي بالنفايات، وتوقفوا عن الاستغلال الجائر لثرواتي السمكية وتدمير بيئتي البحرية. ذكّرهم أن احترام القانون البيئي وتطبيق 'الراحة البيولوجية' ليس مجرد إجراء، بل هو عهدٌ لضمان بقاء الحياة. كن صوتي وكن حارسي, فبقاء نبضي من بقاء وفائك لهذا العهد."
                 </p>
-
                 <p style="font-size: 1.3em; color: #ccc; line-height: 1.8; direction: ltr; text-align: justify; border-top: 1px solid #444; padding-top: 20px;">
                     ⚠️ "I am the sea, and I speak to you, Nouh, because you are the one who heard my call. Do not just look at my waves; carry my cry to the world. Tell them to stop polluting my waters, and end the reckless exploitation of my marine life and habitats. Remind them that respecting environmental law and the 'biological rest' is not just a policy, but a covenant for survival. Be my voice and my guardian, for my pulse endures as long as you remain faithful to this vow."
                 </p>
-                
             </div>
             <div class="close-overlay" style="margin-top: 30px; font-size: 1.2em; border-color: #00d4ff; color: #00d4ff; cursor: pointer; text-align: center;" onclick="closeAndStop('sea-modal')">CLOSE | إغلاق</div>
         </div>
     </div>
 
-    <!-- نافذة العرض الكامل للصور -->
     <div id="full-view-modal">
         <span class="close-btn" onclick="document.getElementById('full-view-modal').style.display='none'">&times;</span>
         <img id="full-img" src="">
@@ -225,14 +233,12 @@
         }
     </script>
     
-    <!-- روابط التواصل والاتصال -->
     <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
         <a href="tel:+212700450691" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">+212 700450691</a>
         <a href="https://x.com/MourchidiN25201" target="_blank" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">X | MourchidiN25201</a>
         <a href="mailto:mourchidinouh@gmail.com" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">mourchidinouh@gmail.com</a>
     </div>
 
-    <!-- تذييل الصفحة (Footer) -->
     <footer style="text-align: center; padding: 40px 20px; border-top: 1px solid #ffffff; margin-top: 50px; color: #ffffff; font-size: 0.85em; line-height: 1.6;">
         <p>جميع الحقوق محفوظة © 2026 N1MOON. | All Rights Reserved © 2026 N1MOON.</p>
         <p style="margin-top: 10px;">
