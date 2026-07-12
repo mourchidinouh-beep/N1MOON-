@@ -7,19 +7,35 @@
     <link rel="icon" type="image/png" href="Logon1moon.png">
     
     <style>
+        /* كود المرشد التفاعلي */
         @keyframes fadeOut { 0% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
+
+        /* إضافة كود المرآة الجديد */
         .nouh-header { padding: 50px 20px; text-align: center; border-bottom: 1px solid #333; background: #000; }
         .nouh-header h1 { color: #E0E0E0; font-size: 2.5rem; letter-spacing: 8px; margin: 0; text-transform: uppercase; font-weight: 300; }
         .tagline { color: #888; font-size: 0.9rem; letter-spacing: 4px; margin-top: 15px; text-transform: uppercase; }
         .tagline-ar { color: #666; font-size: 0.8rem; margin-top: 8px; }
+
+        /* بقية أكوادك كما هي تماماً */
         body { background-color: #000000; color: #ffffff; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
         .logo-img { max-width: 250px; margin-top: 20px; border-radius: 10px; }
         h1 { letter-spacing: 5px; margin: 10px 0; }
-        .btn { display: block; width: 80%; max-width: 350px; margin: 15px auto; padding: 15px; border: 1px solid #ffffff; color: #ffffff; text-decoration: none; background: transparent; cursor: pointer; transition: 0.4s; font-size: 1em; box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); }
+        
+        .btn { 
+            display: block; width: 80%; max-width: 350px; margin: 15px auto; padding: 15px; 
+            border: 1px solid #ffffff; color: #ffffff; text-decoration: none; 
+            background: transparent; cursor: pointer; transition: 0.4s; font-size: 1em; 
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
+        }
         .btn:hover { background: #ffffff; color: #000000; box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); transform: scale(1.02); }
-        .sea-warning-btn { border: 2px solid #00d4ff !important; color: #00d4ff !important; font-weight: bold; animation: pulse 2s infinite; box-shadow: 0 0 10px rgba(0, 212, 255, 0.3); }
+        
+        .sea-warning-btn { 
+            border: 2px solid #00d4ff !important; color: #00d4ff !important; font-weight: bold; 
+            animation: pulse 2s infinite; box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+        }
         .sea-warning-btn:hover { background: #00d4ff; color: #000000; transform: scale(1.02); }
         @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(0, 212, 255, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); } }
+        
         .modal { display: none; position: fixed; z-index: 1000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.98); overflow-y: auto; padding: 20px; }
         .modal-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1000px; margin: 50px auto; }
         .modal-content img { width: 100%; border-radius: 8px; cursor: pointer; border: 1px solid #444; }
@@ -34,17 +50,35 @@
         .story-text { color: #fff; width: 85%; margin-top: 20px; font-size: 1.1em; line-height: 1.6; }
         .close-overlay { margin: 30px auto; cursor: pointer; border: 1px solid #fff; padding: 10px 30px; border-radius: 30px; width: fit-content; transition: 0.3s; }
         .close-overlay:hover { background: #fff; color: #000; }
+        
         .story-box { background: #151515; padding: 30px; border: 1px solid #333; margin-bottom: 30px; text-align: justify; line-height: 1.8; border-radius: 10px; color: #ccc; }
-        .gallery-new { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin: 30px auto; }
-        .gallery-new img { width: 100%; border-radius: 8px; border: 1px solid #444; transition: transform 0.3s; }
+        
+        .gallery-new { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; 
+            max-width: 1000px; 
+            margin: 30px auto; 
+        }
+        .gallery-new img { 
+            width: 100%; 
+            border-radius: 8px; 
+            border: 1px solid #444;
+            transition: transform 0.3s;
+        }
     </style>
 </head>
 <body>
 
+    <!-- مشغل الموسيقى (مخفي) -->
+    <audio id="mainAudio" loop></audio>
+
+    <!-- رسالة الإرشاد التفاعلية -->
     <div style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.1); color: #fff; padding: 12px 25px; border-radius: 30px; border: 1px solid #fff; font-size: 0.9em; backdrop-filter: blur(5px); z-index: 9999; animation: fadeOut 8s forwards;">
         💡 اضغط على البطاقات لاستكشاف المحتوى | Tap to explore
     </div>
 
+    <!-- المرآة الجديدة -->
     <header class="nouh-header">
         <h1>NOUH EL MORCHIDI</h1>
         <p class="tagline">Art • Vision • Marine Preservation</p>
@@ -56,25 +90,27 @@
 
     <a href="https://n1moon-shop.fourthwall.com/" class="btn">SHOP PRODUCTS | متجر المنتجات</a>
     <a href="https://www.saatchiart.com/nouhart" class="btn">ART GALLERY | معرض اللوحات</a>
-    <div class="btn" onclick="document.getElementById('jacket-modal').style.display='block'">VIEW JACKIE PUFFER | عرض JACKIE</div>
-    <div class="btn" onclick="document.getElementById('moon-modal').style.display='block'">LUNAR ASTRONOMY | معرض الفلك القمري</div>
-    <div class="btn" onclick="document.getElementById('soul-modal').style.display='block'" style="border-color: #ffd700; color: #ffd700;">MY SPIRITUAL THREAD | مسار الروح</div>
-    
-    <!-- قسم الصوتيات الجديد -->
-    <div style="text-align: center; margin: 20px auto; padding: 20px; border: 1px solid #00d4ff; border-radius: 20px; max-width: 350px; background: rgba(0, 212, 255, 0.05);">
-        <h4 style="color: #00d4ff; margin-top: 0; margin-bottom: 10px;">🌊 N1MOON Soundscape 🎶</h4>
-        <select id="audioSelector" onchange="changeMusic()" style="background: #000; color: #00d4ff; border: 1px solid #00d4ff; padding: 8px; border-radius: 10px; width: 100%; cursor: pointer;">
-            <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">🌊 أمواج هادئة | Calm Waves</option>
-            <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">🌌 سيمفونية القمر | Lunar Symphony</option>
-            <option value="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">🐚 أعماق البحر | Deep Sea Echoes</option>
-        </select>
-        <button onclick="toggleAudio()" style="margin-top: 10px; background: #00d4ff; border: none; color: #000; font-weight: bold; padding: 8px 20px; border-radius: 20px; cursor: pointer; width: 100%;">▶️ تشغيل | Play</button>
-    </div>
-    <audio id="seaAudio" loop></audio>
-
-    <div class="btn sea-warning-btn" onclick="document.getElementById('sea-modal').style.display='block'">⚠️ صرخة البحر | THE SEA'S CRY</div>
+    <div class="btn" onclick="openAndPlay('jacket-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">VIEW JACKIE PUFFER | عرض JACKIE</div>
+    <div class="btn" onclick="openAndPlay('moon-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3')">LUNAR ASTRONOMY | معرض الفلك القمري</div>
+    <div class="btn" onclick="openAndPlay('soul-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3')" style="border-color: #ffd700; color: #ffd700;">MY SPIRITUAL THREAD | مسار الروح</div>
+    <div class="btn sea-warning-btn" onclick="openAndPlay('sea-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3')">⚠️ صرخة البحر | THE SEA'S CRY</div>
     <div class="btn" onclick="document.getElementById('about-modal').style.display='block'">LIFE JOURNEY | ART NOUH</div>
 
+    <!-- الدوال البرمجية للموسيقى -->
+    <script>
+        function openAndPlay(modalId, audioSrc) {
+            var audio = document.getElementById("mainAudio");
+            audio.src = audioSrc;
+            audio.play();
+            document.getElementById(modalId).style.display = 'block';
+        }
+        function closeAndStop(modalId) {
+            document.getElementById("mainAudio").pause();
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+
+    <!-- تعديل الأزرار لتشغيل الموسيقى وإيقافها عند الإغلاق -->
     <div id="about-modal" class="modal">
         <span class="close-btn" onclick="document.getElementById('about-modal').style.display='none'">&times;</span>
         <div class="soul-container" style="max-width: 800px;">
@@ -85,7 +121,11 @@
                 <strong>English:</strong><br>
                 I have always believed that life is a grand canvas. My journey began in restaurant management, and later my technical passion led me to water filtration systems and shellfish farming. All this passion—between fieldwork and technical precision—found its expression in my art. My paintings are not merely colors; they are a reflection of a soul that cherishes purity, and an artistic call to protect my country's treasures. I am Nouh, an artist who carries the responsibility of the land in his brush, and the stories of the sea in his heart.
             </div>
-            <div style="margin-bottom: 30px;"><img src="IMG-20240426-WA0042.jpg" style="width: 100%; max-width: 500px; border-radius: 10px; border: 2px solid #fff;"></div>
+            
+            <div style="margin-bottom: 30px;">
+                <img src="IMG-20240426-WA0042.jpg" style="width: 100%; max-width: 500px; border-radius: 10px; border: 2px solid #fff;">
+            </div>
+
             <div class="gallery-new">
                 <img src="IMG-20240426-WA0015~2.jpg">
                 <img src="IMG-20240426-WA0017~2.jpg">
@@ -101,7 +141,7 @@
     </div>
 
     <div id="jacket-modal" class="modal">
-        <span class="close-btn" onclick="document.getElementById('jacket-modal').style.display='none'">&times;</span>
+        <span class="close-btn" onclick="closeAndStop('jacket-modal')">&times;</span>
         <div class="soul-container">
             <h2 style="margin-bottom: 30px;">JACKIE PUFFER</h2>
             <div class="modal-content" style="margin-top: 0; margin-bottom: 30px; display: block;">
@@ -114,12 +154,12 @@
             <div style="text-align: center; padding: 20px; background: #111; border-radius: 10px; border: 1px solid #444; color: #ccc;">
                 <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 15px;"><strong>فلسفة التصميم:</strong> جاكيت "جاكي" يمثل دمجاً بين الدفء والحداثة، مصمم بياقة هندسية توفر حماية وعزلاً مع الحفاظ على طابع مستقبلي خاص بـ N1MOON.</p>
             </div>
-            <div class="close-overlay" style="margin-top: 30px;" onclick="document.getElementById('jacket-modal').style.display='none'">CLOSE | إغلاق</div>
+            <div class="close-overlay" style="margin-top: 30px;" onclick="closeAndStop('jacket-modal')">CLOSE | إغلاق</div>
         </div>
     </div>
 
     <div id="moon-modal" class="modal">
-        <span class="close-btn" onclick="document.getElementById('moon-modal').style.display='none'">&times;</span>
+        <span class="close-btn" onclick="closeAndStop('moon-modal')">&times;</span>
         <div class="modal-content">
             <img src="IMG_20260629_010318~2.jpg" onclick="openFullImage(this.src, 'كل ظل هو تجربة.', 'Every shadow is an experience.')">
             <img src="IMG_20260629_005016~2.jpg" onclick="openFullImage(this.src, 'الهدوء قوة.', 'Tranquility is strength.')">
@@ -129,30 +169,33 @@
     </div>
 
     <div id="soul-modal" class="modal">
-        <span class="close-btn" onclick="document.getElementById('soul-modal').style.display='none'">&times;</span>
+        <span class="close-btn" onclick="closeAndStop('soul-modal')">&times;</span>
         <div class="soul-container">
             <h2 style="margin-bottom: 50px;">مسار الروح | THE SOUL'S PATH</h2>
             <div class="story-item"><img src="Messenger_creation_191854465336767.jpg"><div class="ar-text">منذ 2017، بدأت الرحلة؛ خيط رفيع يربط روحي بسكون الأرض.</div><div class="en-text">From here the pact began; years of silent reflection between me and the earth.</div></div>
             <div class="story-item"><img src="IMG_20260616_204640.jpg"><div class="ar-text">القمر.. المحرك الصامت الذي يأمر المد والجزر، وهو البوصلة التي توجه كياني.</div><div class="en-text">The Moon.. the silent mover that commands the tides.</div></div>
             <div class="story-item"><img src="IMG_20260616_205243.jpg"><div class="ar-text">البحر يستجيب، وفي حركة المد والجزر، أرى انعكاساً لنبض روحي المستمر.</div><div class="en-text">The Sea responds; a reflection of my own constant pulse.</div></div>
             <div class="story-item"><img src="IMG_20260621_002624~2.jpg"><div class="ar-text">أنا ذلك الخيط؛ بين تجاذب القمر وانفتاح البحر، وجدت حقيقتي.</div><div class="en-text">I am that thread; I found my truth.</div></div>
-            <div class="close-overlay" onclick="document.getElementById('soul-modal').style.display='none'">BACK | إغلاق</div>
+            <div class="close-overlay" onclick="closeAndStop('soul-modal')">BACK | إغلاق</div>
         </div>
     </div>
 
     <div id="sea-modal" class="modal">
-        <span class="close-btn" style="color:#00d4ff;" onclick="document.getElementById('sea-modal').style.display='none'">&times;</span>
+        <span class="close-btn" style="color:#00d4ff;" onclick="closeAndStop('sea-modal')">&times;</span>
         <div class="soul-container">
             <h2 style="color: #ff3333; margin-bottom: 30px; font-size: 2em; text-align: center;">⚠️ صرخة البحر | THE SEA'S CRY ⚠️</h2>
             <div style="border: 2px solid #ff3333; padding: 40px; border-radius: 20px; background: rgba(0, 0, 0, 0.9); text-align: center;">
+                
                 <p style="font-size: 1.5em; color: #fff; line-height: 1.8; margin-bottom: 30px; direction: rtl; text-align: justify;">
                     ⚠️ "أنا البحر، أخاطبك يا نوح لأنك الوحيد الذي استمع لندائي. لا تكتفِ بالنظر إلى أمواجي، بل انقل صرختي للعالم: كفّوا عن تدنيس مياهي بالنفايات، وتوقفوا عن الاستغلال الجائر لثرواتي السمكية وتدمير بيئتي البحرية. ذكّرهم أن احترام القانون البيئي وتطبيق 'الراحة البيولوجية' ليس مجرد إجراء، بل هو عهدٌ لضمان بقاء الحياة. كن صوتي وكن حارسي، فبقاء نبضي من بقاء وفائك لهذا العهد."
                 </p>
+
                 <p style="font-size: 1.3em; color: #ccc; line-height: 1.8; direction: ltr; text-align: justify; border-top: 1px solid #444; padding-top: 20px;">
                     ⚠️ "I am the sea, and I speak to you, Nouh, because you are the one who heard my call. Do not just look at my waves; carry my cry to the world. Tell them to stop polluting my waters, and end the reckless exploitation of my marine life and habitats. Remind them that respecting environmental law and the 'biological rest' is not just a policy, but a covenant for survival. Be my voice and my guardian, for my pulse endures as long as you remain faithful to this vow."
                 </p>
+                
             </div>
-            <div class="close-overlay" style="margin-top: 30px; font-size: 1.2em; border-color: #00d4ff; color: #00d4ff; cursor: pointer; text-align: center;" onclick="document.getElementById('sea-modal').style.display='none'">CLOSE | إغلاق</div>
+            <div class="close-overlay" style="margin-top: 30px; font-size: 1.2em; border-color: #00d4ff; color: #00d4ff; cursor: pointer; text-align: center;" onclick="closeAndStop('sea-modal')">CLOSE | إغلاق</div>
         </div>
     </div>
 
@@ -163,32 +206,14 @@
     </div>
 
     <script>
-        function changeMusic() {
-            var audio = document.getElementById("seaAudio");
-            var selector = document.getElementById("audioSelector");
-            audio.src = selector.value;
-            audio.play();
-            document.querySelector("button").innerHTML = "⏸️ إيقاف | Stop";
-        }
-        function toggleAudio() {
-            var audio = document.getElementById("seaAudio");
-            var btn = document.querySelector("button");
-            if (audio.paused) {
-                if(audio.src == "") audio.src = document.getElementById("audioSelector").value;
-                audio.play();
-                btn.innerHTML = "⏸️ إيقاف | Stop";
-            } else {
-                audio.pause();
-                btn.innerHTML = "▶️ تشغيل | Play";
-            }
-        }
         function openFullImage(src, ar, en) {
             document.getElementById('full-img').src = src;
             document.getElementById('image-story').innerHTML = '<div style="margin-bottom:10px;">' + ar + '</div><div style="color:#aaa; font-style:italic;">' + en + '</div>';
             document.getElementById('full-view-modal').style.display = 'flex';
         }
     </script>
-
+    
+    <!-- (بقية المحتوى السفلي) -->
     <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
         <a href="tel:+212700450691" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">+212 700450691</a>
         <a href="https://x.com/MourchidiN25201" target="_blank" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">X | MourchidiN25201</a>
