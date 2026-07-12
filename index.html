@@ -7,6 +7,9 @@
     <link rel="icon" type="image/png" href="Logon1moon.png">
     
     <style>
+        /* كود المرشد التفاعلي */
+        @keyframes fadeOut { 0% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
+
         /* إضافة كود المرآة الجديد */
         .nouh-header { padding: 50px 20px; text-align: center; border-bottom: 1px solid #333; background: #000; }
         .nouh-header h1 { color: #E0E0E0; font-size: 2.5rem; letter-spacing: 8px; margin: 0; text-transform: uppercase; font-weight: 300; }
@@ -67,6 +70,11 @@
 </head>
 <body>
 
+    <!-- رسالة الإرشاد التفاعلية -->
+    <div style="position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(255,255,255,0.1); color: #fff; padding: 12px 25px; border-radius: 30px; border: 1px solid #fff; font-size: 0.9em; backdrop-filter: blur(5px); z-index: 9999; animation: fadeOut 8s forwards;">
+        💡 اضغط على البطاقات لاستكشاف المحتوى | Tap to explore
+    </div>
+
     <!-- المرآة الجديدة -->
     <header class="nouh-header">
         <h1>NOUH EL MORCHIDI</h1>
@@ -85,6 +93,7 @@
     <div class="btn sea-warning-btn" onclick="document.getElementById('sea-modal').style.display='block'">⚠️ صرخة البحر | THE SEA'S CRY</div>
     <div class="btn" onclick="document.getElementById('about-modal').style.display='block'">LIFE JOURNEY | ART NOUH</div>
 
+    <!-- بقية محتواك كما هو -->
     <div id="about-modal" class="modal">
         <span class="close-btn" onclick="document.getElementById('about-modal').style.display='none'">&times;</span>
         <div class="soul-container" style="max-width: 800px;">
