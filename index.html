@@ -93,7 +93,10 @@
     <div class="btn" onclick="openAndPlay('jacket-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">VIEW JACKIE PUFFER | عرض JACKIE</div>
     <div class="btn" onclick="openAndPlay('moon-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3')">LUNAR ASTRONOMY | معرض الفلك القمري</div>
     <div class="btn" onclick="openAndPlay('soul-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3')" style="border-color: #ffd700; color: #ffd700;">MY SPIRITUAL THREAD | مسار الروح</div>
-    <div class="btn sea-warning-btn" onclick="openAndPlay('sea-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3')">⚠️ صرخة البحر | THE SEA'S CRY</div>
+    
+    <!-- زر البحر مع صوت أمواج البحر الطبيعية المحدث -->
+    <div class="btn sea-warning-btn" onclick="openAndPlay('sea-modal', 'https://actions.google.com/sounds/v1/water/ocean_waves.ogg')">⚠️ صرخة البحر | THE SEA'S CRY</div>
+    
     <div class="btn" onclick="document.getElementById('about-modal').style.display='block'">LIFE JOURNEY | ART NOUH</div>
 
     <!-- الدوال البرمجية للموسيقى -->
@@ -105,12 +108,14 @@
             document.getElementById(modalId).style.display = 'block';
         }
         function closeAndStop(modalId) {
-            document.getElementById("mainAudio").pause();
+            var audio = document.getElementById("mainAudio");
+            audio.pause();
+            audio.currentTime = 0;
             document.getElementById(modalId).style.display = 'none';
         }
     </script>
 
-    <!-- تعديل الأزرار لتشغيل الموسيقى وإيقافها عند الإغلاق -->
+    <!-- نافذة LIFE JOURNEY -->
     <div id="about-modal" class="modal">
         <span class="close-btn" onclick="document.getElementById('about-modal').style.display='none'">&times;</span>
         <div class="soul-container" style="max-width: 800px;">
@@ -140,6 +145,7 @@
         </div>
     </div>
 
+    <!-- نافذة JACKIE PUFFER -->
     <div id="jacket-modal" class="modal">
         <span class="close-btn" onclick="closeAndStop('jacket-modal')">&times;</span>
         <div class="soul-container">
@@ -158,6 +164,7 @@
         </div>
     </div>
 
+    <!-- نافذة LUNAR ASTRONOMY -->
     <div id="moon-modal" class="modal">
         <span class="close-btn" onclick="closeAndStop('moon-modal')">&times;</span>
         <div class="modal-content">
@@ -166,8 +173,10 @@
             <img src="IMG_20260621_002624~2.jpg" onclick="openFullImage(this.src, 'تأمل في سكون الكون.', 'Meditation in silence.')">
             <img src="IMG_20260619_234330~2.jpg" onclick="openFullImage(this.src, 'القمر يراقب الأرض.', 'The moon watches the Earth.')">
         </div>
+        <div class="close-overlay" style="margin: 30px auto;" onclick="closeAndStop('moon-modal')">CLOSE | إغلاق</div>
     </div>
 
+    <!-- نافذة MY SPIRITUAL THREAD -->
     <div id="soul-modal" class="modal">
         <span class="close-btn" onclick="closeAndStop('soul-modal')">&times;</span>
         <div class="soul-container">
@@ -180,6 +189,7 @@
         </div>
     </div>
 
+    <!-- نافذة THE SEA'S CRY -->
     <div id="sea-modal" class="modal">
         <span class="close-btn" style="color:#00d4ff;" onclick="closeAndStop('sea-modal')">&times;</span>
         <div class="soul-container">
@@ -187,7 +197,7 @@
             <div style="border: 2px solid #ff3333; padding: 40px; border-radius: 20px; background: rgba(0, 0, 0, 0.9); text-align: center;">
                 
                 <p style="font-size: 1.5em; color: #fff; line-height: 1.8; margin-bottom: 30px; direction: rtl; text-align: justify;">
-                    ⚠️ "أنا البحر، أخاطبك يا نوح لأنك الوحيد الذي استمع لندائي. لا تكتفِ بالنظر إلى أمواجي، بل انقل صرختي للعالم: كفّوا عن تدنيس مياهي بالنفايات، وتوقفوا عن الاستغلال الجائر لثرواتي السمكية وتدمير بيئتي البحرية. ذكّرهم أن احترام القانون البيئي وتطبيق 'الراحة البيولوجية' ليس مجرد إجراء، بل هو عهدٌ لضمان بقاء الحياة. كن صوتي وكن حارسي، فبقاء نبضي من بقاء وفائك لهذا العهد."
+                    ⚠️ "أنا البحر، أخاطبك يا نوح لأنك الوحيد الذي استمع لندائي. لا تكتفِ بالنظر إلى أمواجي، بل انقل صرختي للعالم: كفّوا عن تدنيس مياهي بالنفايات، وتوقفوا عن الاستغلال الجائر لثرواتي السمكية وتدمير بيئتي البحرية. ذكّرهم أن احترام القانون البيئي وتطبيق 'الراحة البيولوجية' ليس مجرد إجراء، بل هو عهدٌ لضمان بقاء الحياة. كن صوتي وكن حارسي, فبقاء نبضي من بقاء وفائك لهذا العهد."
                 </p>
 
                 <p style="font-size: 1.3em; color: #ccc; line-height: 1.8; direction: ltr; text-align: justify; border-top: 1px solid #444; padding-top: 20px;">
@@ -199,7 +209,9 @@
         </div>
     </div>
 
+    <!-- نافذة العرض الكامل للصور -->
     <div id="full-view-modal">
+        <span class="close-btn" onclick="document.getElementById('full-view-modal').style.display='none'">&times;</span>
         <img id="full-img" src="">
         <div id="image-story" class="story-text"></div>
         <div class="close-overlay" onclick="document.getElementById('full-view-modal').style.display='none'">CLOSE | إغلاق</div>
@@ -213,13 +225,14 @@
         }
     </script>
     
-    <!-- (بقية المحتوى السفلي) -->
+    <!-- روابط التواصل والاتصال -->
     <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: center; gap: 10px;">
         <a href="tel:+212700450691" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">+212 700450691</a>
         <a href="https://x.com/MourchidiN25201" target="_blank" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">X | MourchidiN25201</a>
         <a href="mailto:mourchidinouh@gmail.com" style="color:#ffffff; text-decoration:none; font-size: 0.9em; border-bottom: 1px solid #444;">mourchidinouh@gmail.com</a>
     </div>
 
+    <!-- تذييل الصفحة (Footer) -->
     <footer style="text-align: center; padding: 40px 20px; border-top: 1px solid #ffffff; margin-top: 50px; color: #ffffff; font-size: 0.85em; line-height: 1.6;">
         <p>جميع الحقوق محفوظة © 2026 N1MOON. | All Rights Reserved © 2026 N1MOON.</p>
         <p style="margin-top: 10px;">
@@ -231,7 +244,7 @@
         <p style="margin-top: 20px; font-style: italic; color: #888;">
             شكراً لـ Google AI على المساعدة في إنتاج هذا الموقع الجميل | Thanks to Google AI for helping produce this beautiful website.
         </p>
-        <p style="margin-top: 15px; opacity: 0.7;">Marocco 🇲🇦 المغرب</p>
+        <p style="margin-top: 15px; opacity: 0.7;">Morocco 🇲🇦 المغرب</p>
     </footer>
 
 </body>
