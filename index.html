@@ -10,21 +10,20 @@
         /* كود المرشد التفاعلي */
         @keyframes fadeOut { 0% { opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; visibility: hidden; } }
 
-        /* إضافة كود المرآة الجديد */
         .nouh-header { padding: 50px 20px; text-align: center; border-bottom: 1px solid #333; background: #000; }
         .nouh-header h1 { color: #E0E0E0; font-size: 2.5rem; letter-spacing: 8px; margin: 0; text-transform: uppercase; font-weight: 300; }
         .tagline { color: #888; font-size: 0.9rem; letter-spacing: 4px; margin-top: 15px; text-transform: uppercase; }
         .tagline-ar { color: #666; font-size: 0.8rem; margin-top: 8px; }
 
-        /* تنسيقات N1MOON Smart Mask الجديدة */
-        .n1moon-section { padding: 50px 20px; background: #050505; border: 1px solid #333; margin: 30px auto; max-width: 900px; border-radius: 15px; }
+        /* تنسيقات نافذة N1MOON Smart Mask */
+        .n1moon-section { padding: 20px; background: #050505; border: 1px solid #333; margin: 10px auto; max-width: 900px; border-radius: 15px; }
         .n1moon-title h2 { color: #3498db; font-size: 2.2rem; margin-bottom: 10px; }
         .n1moon-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
         .n1moon-image { width: 100%; border: 2px solid #444; border-radius: 10px; transition: 0.3s; }
         .n1moon-image:hover { transform: scale(1.02); }
         .n1moon-description { text-align: justify; line-height: 1.8; color: #ccc; margin-top: 30px; padding: 20px; border-right: 4px solid #3498db; background: #111; }
 
-        /* بقية أكوادك كما هي تماماً */
+        /* بقية الأكواد */
         body { background-color: #000000; color: #ffffff; font-family: sans-serif; text-align: center; margin: 0; padding: 20px; }
         .logo-img { max-width: 250px; margin-top: 20px; border-radius: 10px; }
         h1 { letter-spacing: 5px; margin: 10px 0; }
@@ -34,9 +33,14 @@
             border: 1px solid #ffffff; color: #ffffff; text-decoration: none; 
             background: transparent; cursor: pointer; transition: 0.4s; font-size: 1em; 
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); 
+            direction: rtl; text-align: center;
         }
         .btn:hover { background: #ffffff; color: #000000; box-shadow: 0 0 20px rgba(255, 255, 255, 0.6); transform: scale(1.02); }
         
+        /* زر القناع المخصص */
+        .mask-btn { border: 1px solid #3498db !important; color: #3498db !important; }
+        .mask-btn:hover { background: #3498db !important; color: #fff !important; }
+
         .sea-warning-btn { 
             border: 2px solid #00d4ff !important; color: #00d4ff !important; font-weight: bold; 
             animation: pulse 2s infinite; box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
@@ -93,29 +97,17 @@
     <img src="Logon1moon.png" class="logo-img" alt="N1MOON">
     <h1>N 1 M O O N</h1>
 
+    <!-- الأزرار الرئيسية المتناسقة في الواجهة -->
     <a href="https://n1moon-shop.fourthwall.com/" class="btn">SHOP PRODUCTS | متجر المنتجات</a>
     <a href="https://www.saatchiart.com/nouhart" class="btn">ART GALLERY | معرض اللوحات</a>
     <div class="btn" onclick="openAndPlay('jacket-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3')">VIEW JACKIE PUFFER | عرض JACKIE</div>
+    
+    <!-- زر قناع N1MOON الجديد الذي طلبته في الواجهة -->
+    <div class="btn mask-btn" onclick="openAndPlay('mask-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3')">N1MOON SMART MASK | قناع الذكي</div>
+    
     <div class="btn" onclick="openAndPlay('moon-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3')">LUNAR ASTRONOMY | معرض الفلك القمري</div>
-    
-    <!-- قسم القناع الذكي الجديد -->
-    <div class="n1moon-section">
-        <div class="n1moon-title"><h2>N1MOON Smart Mask</h2></div>
-        <div class="n1moon-gallery">
-            <img src="1783912020685.png" class="n1moon-image" alt="Side View">
-            <img src="1783910598841.png" class="n1moon-image" alt="Interior Detail">
-            <img src="1783912025590.png" class="n1moon-image" alt="Technical View">
-        </div>
-        <div class="n1moon-description">
-            <p><strong>N1MOON Smart Mask: Superior Respiratory Protection.</strong> Engineered for ultimate protection, combining advanced electronic filtration with an ergonomic metallic design. It creates a secure, airtight seal, blocking pollutants while maintaining effortless airflow.</p>
-            <p><strong>قناع N1MOON الذكي: حماية تنفسية فائقة.</strong> صُمم لتوفير أعلى مستويات الحماية، بدمج تقنيات الفلترة المتطورة مع تصميم معدني مريح يضمن إغلاقاً محكماً يمنع الملوثات ويسمح بتدفق هواء طبيعي.</p>
-        </div>
-    </div>
-
     <div class="btn" onclick="openAndPlay('soul-modal', 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3')" style="border-color: #ffd700; color: #ffd700;">MY SPIRITUAL THREAD | مسار الروح</div>
-    
     <div class="btn sea-warning-btn" onclick="openAndPlay('sea-modal', 'https://actions.google.com/sounds/v1/water/ocean_waves.ogg')">⚠️ صرخة البحر | THE SEA'S CRY</div>
-    
     <div class="btn" onclick="document.getElementById('about-modal').style.display='block'">LIFE JOURNEY | ART NOUH</div>
 
     <script>
@@ -133,6 +125,27 @@
         }
     </script>
 
+    <!-- نافذة القناع الذكي الجديدة (Modal) -->
+    <div id="mask-modal" class="modal">
+        <span class="close-btn" onclick="closeAndStop('mask-modal')">&times;</span>
+        <div class="soul-container" style="max-width: 900px;">
+            <div class="n1moon-section">
+                <div class="n1moon-title"><h2>N1MOON Smart Mask</h2></div>
+                <div class="n1moon-gallery">
+                    <img src="1783912020685.png" class="n1moon-image" alt="Side View">
+                    <img src="1783910598841.png" class="n1moon-image" alt="Interior Detail">
+                    <img src="1783912025590.png" class="n1moon-image" alt="Technical View">
+                </div>
+                <div class="n1moon-description">
+                    <p><strong>N1MOON Smart Mask: Superior Respiratory Protection.</strong> Engineered for ultimate protection, combining advanced electronic filtration with an ergonomic metallic design. It creates a secure, airtight seal, blocking pollutants while maintaining effortless airflow.</p>
+                    <p><strong>قناع N1MOON الذكي: حماية تنفسية فائقة.</strong> صُمم لتوفير أعلى مستويات الحماية، بدمج تقنيات الفلترة المتطورة مع تصميم معدني مريح يضمن إغلاقاً محكماً يمنع الملوثات ويسمح بتدفق هواء طبيعي.</p>
+                </div>
+            </div>
+            <div class="close-overlay" onclick="closeAndStop('mask-modal')">CLOSE | إغلاق</div>
+        </div>
+    </div>
+
+    <!-- نافذة حول الفنان -->
     <div id="about-modal" class="modal">
         <span class="close-btn" onclick="document.getElementById('about-modal').style.display='none'">&times;</span>
         <div class="soul-container" style="max-width: 800px;">
@@ -162,37 +175,32 @@
         </div>
     </div>
 
+    <!-- نافذة الجاكيت -->
     <div id="jacket-modal" class="modal">
         <span class="close-btn" onclick="closeAndStop('jacket-modal')">&times;</span>
         <div class="soul-container">
             <h2 style="margin-bottom: 30px;">JACKIE PUFFER</h2>
             <div class="modal-content" style="margin-top: 0; margin-bottom: 30px; display: block;">
-                
                 <div class="story-item">
                     <div style="color:#fff; margin-bottom:5px; font-weight:bold;">ياقة هندسية n1moon Jacket Collard. N1-GEO.COL | Geometric Series1 High Collar</div>
                     <img src="jacket.n1moon1.png" onclick="openFullImage(this.src, 'ياقة هندسية N1-GEO-COLLAR.', 'jacket n1moon Geometric Series1 High Collar.')">
                 </div>
-                
                 <div class="story-item">
                     <div style="color:#fff; margin-bottom:5px; font-weight:bold;"> N1-HEX تفاصيل الجاكيت | Jacket n1moon. N1-HEX Series1</div>
                     <img src="1782879948443.png" onclick="openFullImage(this.src, ' N1-HEX تفاصيل الجاكيت.', 'Jacket n1moon Hexagonal Edition N1-HEX Series1.')">
                 </div>
-                
                 <div class="story-item">
                     <div style="color:#fff; margin-bottom:5px; font-weight:bold;">رؤية المونوليث | Jacket n1moon Monolith Vision</div>
                     <img src="1783738709476.jpg" onclick="openFullImage(this.src, 'نظرة شمولية المونوليث على فلسفة N1MOON.', 'A comprehensive look at the N1MOON philosophy.')">
                 </div>
-                
                 <div class="story-item">
                     <div style="color:#fff; margin-bottom:5px; font-weight:bold;">الدرع الرقمي | Jacket n1moon Digital Shield</div>
                     <img src="1783737855576.png" onclick="openFullImage(this.src, 'أكثر من مجرد ياقة؛ إنها درعك الرقمي.', 'More than just a collar; it\'s your digital shield.')">
                 </div>
-                
                 <div class="story-item">
                     <div style="color:#fff; margin-bottom:5px; font-weight:bold;">حضور المونوليث |Jacket n1moon Monolith Presence</div>
                     <img src="1783737850669.jpg" onclick="openFullImage(this.src, 'حضور مطلق. سترة المونوليث.', 'Absolute presence. The Monolith jacket.')">
                 </div>
-                
             </div>
             <div style="text-align: center; padding: 20px; background: #111; border-radius: 10px; border: 1px solid #444; color: #ccc;">
                 <p style="font-size: 1.1em; line-height: 1.6; margin-bottom: 15px;"><strong>فلسفة التصميم:</strong> جاكيت "جاكي" يمثل دمجاً بين الدفء والحداثة، مصمم بياقة هندسية توفر حماية وعزلاً مع الحفاظ على طابع مستقبلي خاص بـ N1MOON.</p>
@@ -201,6 +209,7 @@
         </div>
     </div>
 
+    <!-- نافذة الفلك القمري -->
     <div id="moon-modal" class="modal">
         <span class="close-btn" onclick="closeAndStop('moon-modal')">&times;</span>
         <div class="modal-content">
@@ -212,6 +221,7 @@
         <div class="close-overlay" style="margin: 30px auto;" onclick="closeAndStop('moon-modal')">CLOSE | إغلاق</div>
     </div>
 
+    <!-- نافذة مسار الروح -->
     <div id="soul-modal" class="modal">
         <span class="close-btn" onclick="closeAndStop('soul-modal')">&times;</span>
         <div class="soul-container">
@@ -224,6 +234,7 @@
         </div>
     </div>
 
+    <!-- نافذة صرخة البحر -->
     <div id="sea-modal" class="modal">
         <span class="close-btn" style="color:#00d4ff;" onclick="closeAndStop('sea-modal')">&times;</span>
         <div class="soul-container">
@@ -240,6 +251,7 @@
         </div>
     </div>
 
+    <!-- نافذة العرض الكامل للصور -->
     <div id="full-view-modal">
         <span class="close-btn" onclick="document.getElementById('full-view-modal').style.display='none'">&times;</span>
         <img id="full-img" src="">
@@ -270,4 +282,10 @@
             </span>
         </p>
         <p style="margin-top: 20px; font-style: italic; color: #888;">
-            شكراً لـ Google AI على المساعدة في إنتاج هذا 
+            شكراً لـ Google AI على المساعدة في إنتاج هذا الموقع الجميل | Thanks to Google AI for helping produce this beautiful website.
+        </p>
+        <p style="margin-top: 15px; opacity: 0.7;">Morocco 🇲🇦 المغرب</p>
+    </footer>
+
+</body>
+</html>
